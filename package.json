@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "preview:mobile": "node scripts/mobile-preview-server.js"
+    "preview:mobile": "node scripts/mobile-preview-server.js",
+    "preview:open": "node scripts/mobile-preview-server.js --open"
   },
   "devDependencies": {}
 }

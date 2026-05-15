@@ -66,14 +66,30 @@ https://ksp.karon.cn/desk
 
 ```powershell
 cd C:\Users\wyq\Desktop\karon
+npm run preview:open
+```
+
+如果只想启动服务、不自动打开浏览器，可以运行：
+
+```powershell
 npm run preview:mobile
 ```
 
-打开：
+打开命令输出中的实际地址，例如：
 
 ```text
 http://localhost:5173/preview
 ```
+
+如果 `5173` 已被占用，服务会自动尝试 `5174`、`5175` 等后续端口，请以命令行最终输出的地址为准。
+
+也可以在命令行直接打开浏览器：
+
+```powershell
+start http://localhost:5173/preview
+```
+
+注意：不要直接在命令行输入 `http://localhost:5173/preview`，Windows 会把它当成命令执行。
 
 页面里有三个入口：
 

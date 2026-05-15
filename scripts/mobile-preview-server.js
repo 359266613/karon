@@ -1,3 +1,4 @@
+const { exec } = require('child_process');
 const fs = require('fs');
 const http = require('http');
 const https = require('https');
@@ -9,7 +10,9 @@ const siteDir = path.join(rootDir, 'ksp.karon.cn');
 const injectCssPath = path.join(rootDir, 'android-wrapper', 'app', 'src', 'main', 'assets', 'ksp-mobile-inject.css');
 const injectJsPath = path.join(rootDir, 'android-wrapper', 'app', 'src', 'main', 'assets', 'ksp-mobile-inject.js');
 
-const port = Number(process.env.PORT || 5173);
+const preferredPort = Number(process.env.PORT || 5173);
+const maxPortAttempts = Number(process.env.PORT_ATTEMPTS || 20);
+const shouldOpenBrowser = process.argv.includes('--open');
 const targetOrigin = process.env.KSP_TARGET || 'https://ksp.karon.cn';
 
 const mimeTypes = {
@@ -232,8 +235,29 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(port, () => {
-  console.log(`KSP mobile preview: http://localhost:${port}/preview`);
-  console.log(`Local APK-style page: http://localhost:${port}/apk-local/desk`);
-  console.log(`Proxy APK-style page: http://localhost:${port}/apk-proxy/desk`);
-});
+function startServer(portToTry, remainingAttempts) {
+  server.once('error', error => {
+    if (error.code === 'EADDRINUSE' && remainingAttempts > 1) {
+      console.warn(`Port ${portToTry} is already in use, trying ${portToTry + 1}...`);
+      startServer(portToTry + 1, remainingAttempts - 1);
+      return;
+    }
+
+    console.error(`Failed to start preview server on port ${portToTry}: ${error.message}`);
+    process.exitCode = 1;
+  });
+
+  server.listen(portToTry, () => {
+    const previewUrl = `http://localhost:${portToTry}/preview`;
+    console.log(`KSP mobile preview: ${previewUrl}`);
+    console.log(`Local APK-style page: http://localhost:${portToTry}/apk-local/desk`);
+    console.log(`Proxy APK-style page: http://localhost:${portToTry}/apk-proxy/desk`);
+    console.log('Open the URL in Chrome, or run: start ' + previewUrl);
+
+    if (shouldOpenBrowser) {
+      exec(`start "" "${previewUrl}"`);
+    }
+  });
+}
+
+startServer(preferredPort, maxPortAttempts);
