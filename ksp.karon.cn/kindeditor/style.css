@@ -1,0 +1,341 @@
+
+.core_title_wrap_bright {
+    width:1000px;
+    height: 56px;
+    line-height: 56px;
+    background: #fff;
+    border-bottom: 1px solid #BBBDBF;
+    position: relative;
+}
+.core_title_txt {
+	padding-top: 20px;
+    display: inline;
+    position: relative;
+    z-index: 10;
+    font-family: "microsoft yahei",simhei,sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}	
+.pull_right, .pull-right {
+    float: right!important;
+}
+.core_title_btns {
+    position: relative;
+    z-index: 10;
+}
+.p_postlist {
+    clear: both;
+}
+.l_post_bright {
+    border: 0;
+   /* border-left: 1px solid #E5E5E5;*/
+    border-bottom: 1px solid #E1E4E6;
+    width: 1000px;
+}
+.clearfix {
+    zoom: 1;
+}
+.d_author, .d_author_anonym {
+    width: 130px;
+    float: left;
+    text-align: center;
+    padding: 15px 0;
+}
+.louzhubiaoshi_wrap {
+    position: relative;
+    border: 0 solid red;
+    *z-index: 201;
+    zoom: 1;
+    height: 0;
+}
+.louzhubiaoshi {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: -15px;
+    right: 0;
+    background: url(/kindeditor/louzhu.png) no-repeat -44px 0;
+    border: 0 solid red;
+    z-index:2;
+}
+.p_author {
+    position: relative;
+    text-align: center;
+    *z-index: 200;
+}
+.l_post_bright .d_name {
+    padding: 0;
+}
+.d_name {
+    padding: 4px 0 7px;
+    letter-spacing: -3px;
+    letter-spacing: normal;
+}
+
+
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+ul, ol, li {
+    list-style: none;
+}
+.d_name .p_author_name {
+    letter-spacing: normal;
+}
+.d_name a {
+    text-decoration: none;
+}
+.l_badge {
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 9px;
+}
+.d_post_content_main {
+    position: relative;
+    float: left;
+    width: 868px;
+    padding: 0 0 8px 20px;
+    background: #fff;
+}
+.l_post_bright .d_post_content_main .p_content {
+    height: auto!important;
+    
+    /*min-height: 170px;*/
+}
+.p_content {
+    position: relative;
+    
+    height: auto!important;
+    
+    padding: 20px 20px 0 0;
+}
+.save_face_bg_hidden {
+    display: none;
+}
+.d_post_content {
+    line-height: 24px;
+    font-size: 14px;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+.core_reply {
+    margin-right: 13px;
+}
+.core_reply_tail {
+    line-height: 28px;
+}
+.post-tail-wrap {
+    float: right;
+    color: #999;
+    position: relative;
+}
+.post-tail-wrap .tail-info {
+    display: inline-block;
+    margin: 0 4px;
+    color: #999;
+}
+.p_reply {
+    float: right;
+    margin-left: 4px;
+}
+a {
+    color: #2d64b3;
+    text-decoration: none;
+}
+.core_reply_wrapper {
+    background: #f7f8fa;
+    width: 815px;
+    border: 1px solid #f0f1f2;
+    margin-top: -1px;
+    min-height: 0;
+}
+.core_reply_content {
+    padding: 4px 15px 14px;
+}
+.core_reply_content li.first_no_border {
+    margin-top: 0;
+    border-top: 0;
+}
+.core_reply_content li {
+    padding-top: 10px;
+}
+.lzl_single_post {
+    position: relative;
+    zoom: 1;
+}
+.lzl_p_p {
+    float: left;
+    width: 32px;
+    height: 32px;
+    border: 1px #ccc solid;
+    padding: 1px;
+}
+.lzl_p_p img {
+    width: 32px;
+    height: 32px;
+}
+.lzl_cnt {
+    margin-left: 45px;
+    zoom: 1;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.lzl_cnt .at {
+    position: relative;
+    zoom: 1;
+}
+.lzl_cnt .lzl_content_main {
+    line-height: 20px;
+    font-size: 14px;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+.lzl_cnt .lzl_content_reply {
+    text-align: right;
+}
+.lzl_cnt .lzl_s_r {
+    color: #666;
+    padding-left: 5px;
+}
+.lzl_editor_container_s {
+    padding-top: 13px;
+}
+.edui-container {
+    position: relative;
+}
+.lzl_editor_container .lzl_panel_wrapper {
+    width: 798px;
+    margin-top: 11px;
+    zoom: 1;
+}
+.lzl_panel_wrapper td {
+    vertical-align: bottom;
+}
+.lzl_panel_btn {
+    line-height: 24px;
+    zoom: 1;
+}
+.lzl_panel_submit {
+    cursor: pointer;
+    float: right;
+    width: 51px;
+    height: 24px;
+    color: #FFF;
+    text-align: center;
+    background-color: blue;
+}
+
+.pb_footer {
+    position: relative;
+    /*border-left: 1px solid #e5e5e5;*/
+    /*border-right: 1px solid #e5e5e5;*/
+    width: 1000px;
+}
+#pb-footer-header {
+    height: 32px;
+}
+#tb_rich_poster_container {
+    padding-top: 0;
+    margin-top: -4px;
+}
+.tb_rich_poster_container {
+    clear: both;
+    margin: 0 auto;
+    padding: 20px 0 0;
+    width: 980px;
+}
+.tb_rich_poster {
+    position: relative;
+    margin-left: 20px;
+}
+.tb_rich_poster_container .tb_rich_poster .poster_head {
+    margin: 0 240px 12px 0;
+}
+.tb_rich_poster .poster_head_text {
+    float: left;
+    font-size: 14px;
+    font-weight: 700;
+}
+#tb_rich_poster_container .poster_head_surveillance {
+    color: #666;
+}
+#tb_rich_poster .poster_head_text a.post_head_btn {
+    line-height: 14px;
+    margin-right: 16px;
+    font-size: 14px;
+    font-family: "Microsoft Yahei","ST Hei";
+}
+.tb_rich_poster .poster_head_text a.cur {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    cursor: auto;
+}
+.tb_rich_poster .poster_head_text a {
+    font-size: 12px;
+    font-weight: 400;
+    color: #999;
+}
+.tb_rich_poster_container .tb_rich_poster .editor_wrapper {
+    margin-left: 0;
+}
+#tb_rich_poster_container .poster_body .poster_component {
+    padding-bottom: 20px;
+}
+.tb_rich_poster .ueditor_container {
+    position: relative;
+}
+.tb_rich_poster .poster_body .editor_bottom_panel {
+    margin: 0 0px 15px 0;
+    height: 28px;
+}
+
+.ke-edit{
+    min-height: 50px !important;
+}
+.tb_rich_poster .poster_body .editor_bottom_panel .poster_submit {
+    float: right;
+}
+.ui_btn_m, .ui_btn_m_disable {
+    display: inline-block;
+    padding: 0 15px;
+    height: 28px;
+    line-height: 28px;
+    overflow: hidden;
+    font-size: 14px;
+    text-align: center;
+}
+.ui_btn {
+    color: #fff;
+    background: #398bfc;
+    border-bottom-color: #3782f0;
+    cursor: pointer;
+}
+.ui_btn, .ui_btn_disable {
+    display: inline-block;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    text-decoration: none;
+}
+.poster-right-area {
+    float: right;
+}
+.tb_rich_poster .poster_body .editor_bottom_panel .poster_clear_fullscreen {
+    display: none;
+    float: right;
+}
+.btn_middle, .btn-middle {
+    padding: 7px 14px;
+    font-size: 12px;
+}
+.btn_small, .btn_middle, .btn_larger, .btn-small, .btn-middle, .btn-larger {
+    line-height: normal!important;
+}
+.btn_sub, .btn-sub, .btn-sub-b {
+    background-color: #fff;
+    color: #333;
+    border-color: #ccc;
+}

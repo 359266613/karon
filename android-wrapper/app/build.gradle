@@ -1,0 +1,23 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'cn.karon.ksp'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'cn.karon.ksp'
+        minSdk 23
+        targetSdk 35
+        versionCode 1
+        versionName '1.0.0'
+
+        def defaultWebUrl = 'https://ksp.karon.cn/desk'
+        buildConfigField 'String', 'KSP_WEB_URL', '"' + (project.findProperty('KSP_WEB_URL') ?: defaultWebUrl) + '"'
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+}

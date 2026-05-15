@@ -1,0 +1,141 @@
+.lately-bar {
+    position: fixed;
+    width: 260px;
+    height: 100%;
+    z-index: 60;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    -webkit-transform: translateX(102%);
+    transform: translateX(102%);
+}
+.lately-bar.open {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+.lately-header {
+    position: absolute;
+    height: 40px;
+    line-height: 40px;
+    top: 0;
+    width: 100%;
+    background-color: #eee;
+}
+.lately-close {
+    float: right;
+    font-family: Verdana;
+    font-size: 18px;
+    line-height: 1;
+    padding: 9px 12px;
+    cursor: pointer;
+    color: #999;
+}
+.lately-close:hover {
+    color: #666;
+}
+.lately-title {
+    font-size: 16px;
+    padding-left: 15px;
+}
+.lately-body {
+    height: inherit;
+    padding-top: 40px;
+}
+.lately-scroll {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.lately-item {
+    position: relative;
+    padding: 10px 10px 10px 60px;
+    line-height: 1.6;
+    cursor: pointer;
+}
+.lately-item:hover {
+    background-color: #f2f2f2;
+}
+.lately-item-avatar {
+    position: absolute;
+    left: 10px;
+}
+.lately-item-avatar img {
+    display: block;
+    border-radius: 50%;
+}
+.lately-item-time {
+    float: right;
+    padding-top: 2px;
+    font-size: 12px;
+    color: #999;
+}
+.lately-item-name {
+    margin-right: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.lately-item-wrap-up {
+    font-size: 12px;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* layer */
+.layer-chat .layui-layer-title {
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    height: 70px;
+    top: 0;
+    background-color: rgba(0,0,0,0);
+    border: none;
+}
+.layer-chat .layui-layer-content,
+.layer-chat .layui-layer-content iframe {
+    height: 100% !important;
+}
+.layer-chat .layui-layer-setwin,
+.layer-chat .layui-layer-resize {
+    z-index: 4;
+}
+.layer-minimize .layui-layer-resize {
+    display: none;
+}
+/* notify */
+.notify-table {
+    display: table;
+    width: 270px;
+}
+.notify-left {
+    display: table-cell;
+    vertical-align: middle;
+    width: 1%;
+}
+.notify-left img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.notify-right {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 10px;
+}
+.notify-right .title {
+    width: 10em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+}
+.notify-right .message {
+    line-height: 1.5;
+    width: 14em;
+    height: 3em;
+    overflow: hidden;
+}

@@ -1,0 +1,3872 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/kindeditor/themes/default/default.css"/>
+<link rel="stylesheet" href="/kindeditor/style.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <title>开元咨询一站式平台</title>
+    
+
+
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="/favicon_ksp.ico">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#2780B3">
+<link rel="stylesheet" href="/assets/plugins/font-awesome/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="/assets/admin/css/theme.css">
+<!-- dataTables -->
+<link rel="stylesheet" href="/assets/plugins/dataTables/datatables.min.css">
+<!-- checkbox -->
+<link rel="stylesheet" href="/assets/plugins/icheck/skins/minimal/blue.css">
+<!-- summernote edit -->
+<link rel="stylesheet" href="/assets/plugins/summernote/summernote.css">
+
+<!--link rel="stylesheet" href="/assets/admin/css/styleThird.css"-->
+
+<link rel="stylesheet" href="/assets/admin/css/style.css">
+
+<!-- chatroom --> 
+<link href="/assets/plugins/chatroom/chatroom/css/animate.min.css" rel="stylesheet">
+<link href="/assets/plugins/chatroom/chatroom/css/chatroom.css" rel="stylesheet">
+<link href="/css/newstyle.css" rel="stylesheet">
+<script src="/assets/scripts/jquery.min.js"></script>
+
+<!--[if lt IE 9]>
+<script src="/assets/scripts/es5-shim.min.js"></script>
+<script src="/assets/scripts/html5shiv.min.js"></script>
+<script src="/assets/scripts/respond.min.js"></script>
+<![endif]-->
+    
+
+
+
+
+
+
+
+
+
+<script src="/assets/scripts/jquery.min.js"></script>
+<script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="/assets/scripts/jquery.form.min.js"></script>
+<script src="/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- form validation -->
+<script src="/assets/plugins/formValidation/formValidation.min.js"></script>
+<script src="/assets/plugins/formValidation/language/zh_CN.js"></script>
+<!-- city link -->
+<script src="/assets/plugins/distpicker/distpicker.data.min.js"></script>
+<script src="/assets/plugins/distpicker/distpicker.min.js"></script>
+<!-- iCheck -->
+<script src="/assets/plugins/icheck/icheck.min.js"></script>
+<!-- layer  -->
+<script src="/assets/plugins/layer/layer.js"></script>
+<!-- laydate  -->
+<script src="/assets/plugins/laydate/laydate.js"></script>
+<script src="/js/groupCode.js"></script>
+<script src="/assets/admin/js/side-menu.js"></script>
+<script src="/assets/admin/js/mobile.js"></script>
+<!-- summernote edit -->
+<script src="/assets/plugins/summernote/summernote.min.js"></script>
+<script src="/assets/plugins/summernote/lang/summernote-zh-CN.min.js"></script>
+
+<!-- chatroom --> 
+<!--script src="/assets/plugins/chatroom/chatroom/js/store.min.js"></script> 
+<script src="/assets/plugins/chatroom/layer/layer.js"></script>
+<script src="/assets/plugins/chatroom/bootstrap-notify/bootstrap-notify.min.js"></script>
+<script src="/assets/plugins/chatroom/chatroom/js/chatroom.js"></script-->
+
+<!-- running -->
+ 
+<script src="/assets/admin/js/app.js"></script>
+<script src="/assets/admin/js/explor.js"></script>
+<script src="/assets/admin/js/buttonListener.js"></script> 
+<script src="/assets/admin/js/setMainBg.js"></script> 
+    <script>
+        function myproject(id) {
+            var params4 = {
+                "title": "【项目详情】",
+                "flag": 1,
+                "id": "" + id + ""
+            };
+            Base.loadContent("ProjectInfo_view", params4, "【项目详情】", null);
+        }
+    </script>
+    <style>
+        .desk-conut__itembd {
+            border-radius: 12px;
+            /*padding-left: 12px;*/
+            box-shadow: 0px 1px 5px grey;
+        }
+
+        .desk-conut__item {
+            height: 100px;
+            background-repeat: no-repeat;
+            /*background-size: auto 100px;   0522*/
+            background-size: 315px;
+            background-position: left center;
+            text-align: left;
+            padding-left: 15px;
+            padding-top: 23px;
+            color: #fff;
+            /*border-radius: 10px;*/
+        }
+
+        .desk-conut__item-hc {
+            background-image: url(images/new/companyAlbum.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            display: block; /* 确保<a>标签覆盖整个元素 */
+            text-decoration: none; /* 移除下划线 */
+        }
+
+        .desk-conut__item-nc {
+            background-image: url(images/new/companyInner.png);
+            background-size: cover; /* 确保背景图片覆盖整个div，不留空白 */
+            background-position: center; /* 将背景图片居中显示 */
+            background-repeat: no-repeat; /* 防止背景图片重复 */
+            height: 100px; /* 设置div的高度，根据需要调整 */
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: left;
+            padding-top: 53px;
+            padding-left: 15px;
+        }
+
+        .desk-conut__item-nc p {
+            color: white;
+            /*font-weight: bold;*/
+            /*text-shadow: 1px 1px 2px white; */
+        }
+
+        .desk-conut__item-nc a {
+            color: white; /* 设置链接颜色为白色 */
+        }
+
+        /*.desk-conut__item-newclass {
+        background-image: url(images/new/newClass-3.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        display: block;
+        text-decoration: none;
+    }*/
+        .desk-conut__item-viedo {
+            width: 52px;
+            height: 35px;
+            background-image: url(images/new/newClassViedo.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+        }
+
+        .desk-conut__item-hcbd {
+            position: relative;
+            overflow: hidden; /* 确保伪元素不会超出边界 */
+            /*background-image: url(images/new/companyAlbum.png);*/
+        }
+
+        .desk-conut__item-one {
+            /*background-image: url(images/new/icon_1.png);*/
+            color: #41403E;
+            background-color: white;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            display: block; /* 确保<a>标签覆盖整个元素 */
+            text-decoration: none; /* 移除下划线 */
+        }
+
+        .desk-conut__item-onebd {
+            /*background-color: #ffffff;*/
+        }
+
+        .desk-conut__item-two {
+            color: #41403E;
+            background-color: white;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            display: block; /* 确保<a>标签覆盖整个元素 */
+            text-decoration: none; /* 移除下划线 */
+        }
+
+        .desk-conut__item-twobd {
+            /*background: linear-gradient(to right, #ff928b ,#ff6284 );*/
+        }
+
+        .desk-conut__item-three {
+            color: #41403E;
+            background-color: white;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            display: block; /* 确保<a>标签覆盖整个元素 */
+            text-decoration: none; /* 移除下划线 */
+        }
+
+        .desk-conut__item-threebd {
+            /*background: linear-gradient(to right, #ab94fa ,#8777fa );*/
+        }
+
+        .desk-conut__item-four {
+            color: #41403E;
+            background-color: white;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            display: block; /* 确保<a>标签覆盖整个元素 */
+            text-decoration: none; /* 移除下划线 */
+        }
+
+        .desk-conut__item-fourbd {
+            /*background: linear-gradient(to right, #5e91ff ,#615cff );*/
+        }
+
+        .magazine-cover {
+            background-image: url("");
+            background-size: cover; /* 确保背景图片覆盖整个div，不留空白 */
+            background-position: center; /* 将背景图片居中显示 */
+            background-repeat: no-repeat; /* 防止背景图片重复 */
+            height: 100px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: left;
+            padding-top: 53px;
+            padding-left: 18px;
+        }
+
+        .magazine-cover p {
+            color: white;
+            font-weight: bold;
+            /*text-shadow: 1px 1px 2px white;*/
+        }
+
+        .magazine-cover a {
+            color: white; /* 设置链接颜色为白色 */
+        }
+    </style>
+    <style>
+        .text-overflow {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .flex-s-c {
+            display: flex;
+            align-items: center;
+        }
+
+        .point-title {
+            width: 27%;
+        }
+
+        .point-box {
+            display: flex;
+            align-items: center;
+        }
+
+        .point-box::before {
+            content: "";
+            border: 3px solid #74A5EE;
+            border-radius: 5px 5px 5px 5px;
+            width: 5px;
+            height: 5px;
+            display: block;
+        }
+
+        .meeting-box {
+            margin-top: 15px;
+            display: flex;
+            border-bottom: 1px solid #EEEEEE;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .time-box {
+            /*width: 58%;*/
+            /*float: left;*/
+            height: 120px;
+            border-radius: 12px;
+            margin-left: 2%;
+            background-color: #F3EFFE;
+            display: flex;
+
+        }
+
+        .incident-box div {
+            /*font-size: calc(0.1vw + 0.1vh);*/
+            /*font-size: 0.1vw;*/
+            margin-bottom: 5px;
+            margin-left: 3px;
+        }
+
+        .incident-box {
+            background-color: #F3EFFE;
+            height: 120px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .weather-box {
+            /*width: 40%;*/
+            background: linear-gradient(to bottom, #76A7F1, #1E6EE4);
+            height: 120px;
+            border-radius: 12px;
+            /*float: left;*/
+            display: flex;
+            padding: 0 10px;
+        }
+
+        .weather-img {
+            width: calc(45% - 10px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .weather {
+            width: 60%;
+            float: left;
+            color: #eeeeee;
+            font-size: 13px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .weather div {
+            font-size: 0.6vw;
+            margin-bottom: 8px;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .weather-box {
+                flex-direction: column;
+            }
+
+            .weather-img {
+                width: 100%
+            }
+
+            .weather-img img {
+                width: 40% !important;
+            }
+
+            .weather {
+                width: 100%
+            }
+        }
+
+        .content_right {
+            width: 26%;
+            display: inline-block;
+            height: 100%;
+            margin-left: 20px;
+            float: right;
+            margin-right: 10px
+        }
+
+        .content {
+            width: 70%;
+            height: 800px;
+            display: inline-block;
+            float: left;
+        }
+
+        .bar {
+            /*height: 300px;*/
+            background-color: #fff;
+            border-radius: 3px;
+            margin-top: 30px
+        }
+
+        .content .title p {
+            text-align: right;
+            color: #fff;
+            font-weight: 500;
+            display: inline-block;
+            width: 85%;
+        }
+
+        .desk-conut__item .num {
+            font-size: 30px;
+            margin-right: 5px;
+        }
+
+        select::-ms-expand {
+            display: none;
+        }
+
+        .select_list {
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            background: url(images/new/chevron_down.png) no-repeat scroll right center transparent;
+            width: 65px;
+            background-color: #eee;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            height: 30px;
+            padding-left: 5px;
+        }
+
+        .dflex {
+            display: -ms-flexbox;
+            -ms-flex-pack: space-between;
+            -ms-flex-align: center;
+            -ms-flex-pack: justify;
+            /*display: flex;*/
+            /*align-items: center;*/
+            /*justify-content: space-between;*/
+        }
+
+        .dflex_right {
+            display: -ms-flexbox;
+            -ms-flex-pack: space-between;
+            -ms-flex-align: center;
+            -ms-flex-pack: justify;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /*background-color: #426c97;*/
+            background: linear-gradient(to right, #2780B3, #bc90cc);
+            color: #fff;
+        }
+
+        ul {
+            padding: 0 20px;
+        }
+
+        .noticed ul > li {
+            list-style: none;
+            font-size: 12px;
+            /*margin-top: 8px;*/
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .noticed ul > li > a {
+            border-left: 4px solid #FF9D0B;
+            padding-left: 10px;
+
+        }
+
+        .content_right ul > li {
+            list-style: none;
+            font-size: 14px;
+            margin: 5px 0;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .content_right ul > li p {
+            width: 200px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .content_right ul > li a.banli {
+            background: #FF9D0B;
+            color: #fff;
+            padding: 2px 4px;
+        }
+
+        .title {
+            /*background: url(icon1.png) no-repeat scroll right center transparent;*/
+            width: 24%;
+            height: 100px;
+            border-radius: 10px;
+
+            display: -ms-flexbox;
+
+            -ms-flex-align: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .text_ell {
+            margin-top: 13px;
+            display: inline-block;
+            /*width: 200px;*/
+            width: calc(90% - 3em);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .body-desk {
+            background-color: #eee;
+            height: 100vh;
+            padding-top: 50px;
+            background: linear-gradient(to bottom, #2780B3, #bc90cc);
+        }
+
+        .body-desk .main-content {
+            /*background-color: transparent;*/
+            height: 100%;
+            margin-top: -17px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            /*background: #eee;*/
+            background: url(../../../images/new/beijingtu.png) #eee no-repeat;
+            background-position: 100% 100%;
+
+        }
+
+        .desk-warpper {
+            margin-left: -20px;
+            padding-top: 20px;
+            padding-right: 20px;
+        }
+
+        .desk-right {
+            width: 260px;
+        }
+
+        .desk-conut {
+            padding: 0 15px 0;
+        }
+
+
+        .desk-rlist {
+            padding: 15px;
+            font-size: 12px;
+            /*height: 120px;*/
+        }
+
+        .desk-rlist > li {
+            margin-bottom: 5px;
+        }
+
+        .desk-rlist > li .desk-rlist__unit {
+            float: right;
+        }
+
+        .desk-rlist > li .desk-rlist__title {
+            /*margin: 0;*/
+            width: calc(100% - 3em);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+
+        .desk-rlist2 > li .desk-rlist__title {
+            width: calc(100% - 6em);
+        }
+
+        .chart {
+            /*width:40%;*/
+            background-color: #fff;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 1px 5px grey;
+            /*display: flex;*/
+            height: 260px;
+            /*overflow-y: scroll;*/
+        }
+
+        .chart_content {
+            width: 100%;
+            display: -ms-flexbox;
+            -ms-flex-pack: justify;
+            -ms-flex-align: center;
+            display: flex;
+            /*justify-content: space-between;*/
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 10px;
+            height: 200px;
+            overflow-y: scroll;
+            margin-left: 20px;
+        }
+
+        .chart_content::-webkit-scrollbar {
+            width: 3px;
+            height: 1px;
+        }
+
+        .chart_content::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            box-shadow: inset 0 5px rgba(97， 184，179，0 .1);
+            background: #E1EODF;
+        }
+
+        .chart_content::-webkit-scrollbar-track {
+            fbox-shadow: inset 0 0 5px rgba(87， 175， 187，0 .1);
+            border-radius: 10px;
+            background: #ededed;
+        }
+
+        .chart_content > p {
+            display: -ms-flexbox;
+            /*-ms-flex-pack: justify;*/
+            -ms-flex-align: center;
+            display: flex;
+            justify-content: flex-start;
+            padding: 1px 0;
+            /*width: 20%;*/
+            /*align-items: center;*/
+            margin-left: 10px;
+        }
+
+        .chart_content img {
+            width: 16px;
+            height: 16px;
+        }
+
+        .chart_content span {
+            margin-left: 8px;
+        }
+
+        .shutcutButton {
+            border: 1px solid #ddd;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            color: #989696;
+        }
+
+        .row a:hover {
+            text-decoration: none;
+            color: black;
+        }
+
+        .othersys {
+            text-align: center;
+        }
+
+        .othersys .other-item {
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+            margin-right: 12px;
+        }
+
+        .othersys .other-item:last-child {
+
+            margin-right: 0;
+        }
+
+        .othersys img {
+            width: 40px
+        }
+
+        .list-unstyled {
+            list-style: none;
+            box-shadow: 0px 1px 5px grey;
+        }
+
+        /**{margin: 0;padding: 0;}*/
+        .container li {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 0 0 2px;
+        }
+
+        .container {
+            width: 100%;
+            margin-left: -10px;
+            /*margin:auto;*/
+        }
+
+        .tabs {
+            display: flex;
+            font-size: calc(0.1vw + 0.1vh);
+
+        }
+
+        .tab {
+            flex: 1;
+            height: 30px;
+            line-height: 30px;
+            cursor: pointer;
+        }
+
+        .content {
+            width: 100%;
+            height: 200px;
+            display: none;
+            overflow-y: scroll;
+            margin-left: 20px;
+            /*background-color: #d8d8d8;*/
+        }
+
+        .content::-webkit-scrollbar {
+            width: 3px;
+            height: 1px;
+        }
+
+        .content::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            box-shadow: inset 0 0 5px rgba(97, 184, 179, 0.1);
+            background: #E1E0DF;
+        }
+
+        .content::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px rgba(87, 175, 187, 0.1);
+            border-radius: 10px;
+            background: #ededed;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .active {
+            background-color: #f6f1f1;
+            color: #001c76;
+            border-radius: 15px;
+        }
+
+        .fontBack {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .fontSet {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .theme {
+            float: left;
+            margin-top: 10px;
+            width: 100%;
+            height: 100px;
+            overflow-y: scroll;
+        }
+
+        .theme::-webkit-scrollbar {
+            width: 3px;
+            height: 1px;
+        }
+
+        .theme::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            box-shadow: inset 0 0 5px rgba(97, 184, 179, 0.1);
+            background: #E1E0DF;
+        }
+
+        .theme::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px rgba(87, 175, 187, 0.1);
+            border-radius: 10px;
+            background: #ededed;
+        }
+
+        .textBox {
+            width: 40%;
+            text-align: center;
+            background-color: #FDEDEA;
+            height: 20%;
+            border-radius: 3px;
+        }
+
+        .textBoxA {
+            text-align: center;
+            background-color: #FDEDEA;
+            height: 20%;
+            width: 20%;
+            border-radius: 3px;
+        }
+
+        .chart-box {
+            /*width: 40%;*/
+            background-color: #fff;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 1px 5px grey;
+        }
+
+        .calenderBox {
+            background-color: #ffffff;
+            border-radius: 12px;
+            display: flex;
+            box-shadow: 0px 1px 5px grey;
+            height: 120px;
+        }
+
+        .calenderBox.empty {
+            background: url(../../../images/new/calendar2.png) #ffffff no-repeat;
+            background-size: contain, cover;
+            background-position: 61%;
+        }
+    </style>
+    <style>
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 216px;
+            max-width: 1200px; /* 根据需要设置最大宽度 */
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .carousel {
+            width: 100%;
+            position: relative; /* 设置为相对定位，作为绝对定位内容的参考 */
+            overflow: hidden; /* 防止绝对定位元素溢出 */
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 215px;
+            object-fit: cover;
+        }
+
+        .carousel-caption {
+            position: absolute;
+            bottom: 85px;
+            left: 15%;
+            color: white;
+            /*text-shadow: 2px 2px 4px #000000; /* 水平偏移、垂直偏移、模糊半径、颜色 */
+            */ font-weight: bold;
+            width: 70%;
+            padding: 10px;
+            text-align: center;
+            font-size: calc(0.9vw + 0.3em);
+        }
+
+        .carousel-caption h3 {
+            width: 100%; /* 设置标题的宽度为100% */
+            white-space: nowrap; /* 默认不换行 */
+            overflow: hidden; /* 隐藏超出部分 */
+            text-overflow: ellipsis; /* 超出部分显示省略号 */
+            word-wrap: break-word; /* 允许在单词内换行 */
+        }
+
+        /* 为了确保在较长的单词或URLs中也能正确折行，可以添加以下媒体查询 */
+        @media screen and (-webkit-min-device-pixel-ratio: 0) {
+            .carousel-caption h3 {
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+            }
+        }
+
+        .carousel-control {
+            position: absolute;
+            top: 58%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 24px;
+            color: #000;
+            /*background-color: rgba(255, 255, 255, 0.1);*/
+            padding: 10px;
+            user-select: none;
+        }
+
+        .carousel-item:not(.active) {
+            display: none; /* 只有活动项可见 */
+        }
+
+
+        .prev {
+            left: 0%;
+        }
+
+        .next {
+            left: 85%;
+            right: 10px;
+        }
+
+        /* 新课推送部分的样式 */
+        .floating-link {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: left;
+            position: absolute; /* 绝对定位 */
+            top: 29px; /* 根据需要调整 */
+            left: -9px; /* 根据需要调整 */
+            z-index: 10; /* 确保它在轮播图之上 */
+            font-size: calc(0.9vw + 0.3em);
+            font-weight: bold;
+            color: black;
+            padding-left: 13%;
+        }
+
+        .floating-link a {
+            color: inherit; /* 继承父元素的颜色 */
+            text-decoration: none; /* 去除下划线 */
+        }
+    </style>
+    <style>
+        .ai-chat-icon {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(to right, #2780B3, #bc90cc);
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 9999;
+        }
+
+        .ai-chat-icon:hover {
+            width: 60px;
+            height: 60px;
+        }
+
+        .ai-chat-icon i {
+            color: #fff;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .ai-chat-icon .ai-label {
+            color: #fff;
+            font-size: 12px;
+            margin-top: 2px;
+            font-weight: bold;
+            opacity: 1;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .ai-chat-icon:hover .ai-label {
+            opacity: 1;
+        }
+
+        .ai-chat-icon:hover i {
+            font-size: 18px;
+        }
+
+        .ai-chat-icon.collapsed {
+            width: 45px;
+            height: 45px;
+        }
+
+        .ai-chat-icon.collapsed i {
+            font-size: 16px;
+        }
+
+        .ai-chat-icon.collapsed .ai-label {
+            opacity: 1;
+            font-size: 12px;
+        }
+
+        /* 添加悬停时的样式 */
+        .ai-chat-icon.collapsed:hover {
+            width: 60px;
+            height: 60px;
+        }
+
+        .ai-chat-icon.collapsed:hover i {
+            font-size: 18px;
+        }
+
+        .ai-chat-window {
+            position: fixed;
+            right: 20px;
+            bottom: 80px;
+            width: 350px;
+            height: 500px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            z-index: 9999;
+        }
+
+        .chat-header {
+            padding: 15px;
+            background: linear-gradient(to right, #2780B3, #bc90cc);
+            color: #fff;
+            border-radius: 10px 10px 0 0;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-header .close-btn {
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .chat-body {
+            height: calc(100% - 110px);
+            padding: 15px;
+            overflow-y: auto;
+        }
+
+        .chat-input {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 10px;
+            border-top: 1px solid #eee;
+            display: flex;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            margin-right: 10px;
+        }
+
+        .chat-input button {
+            padding: 8px 15px;
+            background: linear-gradient(to right, #2780B3, #bc90cc);
+            border: none;
+            border-radius: 20px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .message {
+            margin: 10px 0;
+        }
+
+        .message.user {
+            text-align: right;
+        }
+
+        .message.user .message-content {
+            background: #e3f2fd;
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 15px;
+            max-width: 80%;
+        }
+
+        .message.ai .message-content {
+            background: #f5f5f5;
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 15px;
+            max-width: 80%;
+        }
+    </style>
+    <link href="/css/mobile.css" rel="stylesheet">
+</head>
+
+<body class="body-desk" id="body1"
+      style="background-size: cover;background-repeat: no-repeat;background-attachment: fixed;background: url(../../../images/new/beijingtu.png) linear-gradient(to bottom,#2780B3 ,#bc90cc) no-repeat;background-position:100% 100%;">
+<!-- header -->
+
+
+
+
+
+
+
+
+
+
+      <!-- header -->
+    <!-- flex-row flex-between -->
+    <div class="lt-header ">
+        <div class="lt-header__left flex-row" style="width: 160px;">
+            <div class="lt-sidebar__toggle flex-row flex-center">
+                <button class="lt-sidebar__toggle-button" id="sidebar_toggle" type="button"><i class="fa fa-bars"  title="收缩/展开菜单"></i></button>
+            </div>
+            <!-- logo图片 -->
+            <div class="header_logo">
+                <a href="desk"  title="返回桌面"><img src="images/new/KYZX.png"></a>
+            </div>
+        </div>
+
+
+        <div class="lt-search">
+               <img src="images/new/KSP.png" height="20px">
+            <!-- h1 class="system-name">
+                <span>Karon</span>
+                <span>Service</span>
+                <span>Platform</span>
+            </h1-->
+            <!-- <div class="input-group input-medium">
+                <input class="form-control" type="text" placeholder="请输入查询关键字">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+                </span>
+            </div> -->
+        </div>
+
+
+        <div class="lt-header__right" style="float: right;position: fixed;right: -0px">
+             <ul class="nav navbar-nav nav-top navbar-right">
+                    <!-- <li><a href="#" onclick="fillPassword()">资料库</a></li>  -->
+                    <!-- <li><a href="https://kris.karon.net.cn/" target="_blank">资料库</a></li> -->
+                    <li><a href="https://kris.karon.net.cn/" target="_blank">常用软件</a></li>
+                    <!-- <li><a href="https://portal.karon.net.cn/soft/" target="_blank">常用软件</a></li> -->
+                    <!-- <li><a href="/Knowledge_index" target="_blank">知识库</a></li> -->
+					<li><a href="/Question_search_index"  target="_blank">开元问答</a></li>
+					<!-- <li><a href="/upload/ruanjiansuosz11.png"  target="_blank">软件锁设置</a></li> -->
+                    <li><a href="/index?tid=304&pid=466&mid=868" >运营手册</a></li>
+                    <li><a href="http://nas.karon.net.cn/" target="_black">NAS地址</a></li>
+					
+					<li title="未读邮件" onclick="showQQEmail()"><image src="images/new/email.svg" style="width: 16px;height: 16px;"></image><a><span id="showEmailLi"><b></b></span></a></li>
+                    <!--<li class="fa fa-database" title="数据库"><a href="https://ksp.sckyzx.com/external/authorize/login_third?client_id=948625911041002040" target="_blank"><b>数据库</b></a></li> -->
+
+                   <!--   <li class="fa fa-file" ><a href="http://211.149.170.33:8077/WebForm1.aspx" target="_black">kris文档查询</a></li> -->
+                    <!-- <li class="fa fa-book" onclick="helper('','','','')" title="在线帮助"><a href="#">帮助</a></li> -->
+                    <!--<li class="fa fa-file-excel-o" title="智慧清单" onclick="window.location.href='integrationNetTrans'"><a href="#">智慧清单</a></li>-->  
+          
+                     <!-- <li class="fa fa-lock"  onclick="lockLogin()" title="锁定屏幕"><a href="#">锁屏</a></li>   -->
+                     <li onclick="updatePassWord()" title="修改密码"><a href="#">修改密码</a></li>
+
+                    
+
+                       
+                        <li>
+                            <a href="javascript:switchNet()" title="切换到内网">切到内网</a>
+                        </li>
+                    
+
+
+
+                    <li><a href="/logout">安全退出</a></li>
+                    <li id="fat-menu" class="dropdown">
+                        <a id="drop3" href="#" class="dropdown-toggle nav-item-img" 
+                        data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+                        title="王友强ky021-wangyouqiang">
+                        <!--a id="drop3" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"-->  
+                        <img class="image-circle" width="40" height="40" src="upload/empPhoto/20180504105408014471.png">
+                         
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="drop3">
+                            <!-- li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li--> <li><a href="javascript:changeDept()">部门：造价事业三部  [切换]</a></li>
+                                      <li   onclick="onlineUser()" title="在线人数"><a href="#">在线人数</a></li>  
+                           <!--  <li><a href="javascript:lockLogin()">锁定</a></li>
+                            <li><a href="javascript:updatePassWord()">修改密码</a></li> -->
+               <!--          
+                        
+                            <li><a href="javascript:switchNet()">【外网】切换到内网</a></li>
+                         -->
+                            
+                        </ul>
+                    </li>
+                </ul>
+        </div>
+    </div>
+    <!-- /.header -->
+
+<!-- /.header -->
+<!-- sidebar -->
+
+
+
+
+
+
+
+
+
+
+	   <!-- sidebar -->
+    <div class="lt-sidebar " id="sidebar">
+        <div class="main-menu">
+            <ul class="first-menu">
+<li>
+<a href="#"  data-type="1" data-group="304" data-type="1">
+ <div class="first-menu__item flex-row flex-column-center">
+     <div class="first-menu__icon flex-row flex-center"><i class="fa fa-suitcase"></i></div>
+     <div class="first-menu__text"><span>日常办公</span></div>
+     <div class="first-menu__arrow"></div>
+  </div>
+  </a>
+ </li>
+<li>
+<a href="#"  data-type="1" data-group="405" data-type="1">
+ <div class="first-menu__item flex-row flex-column-center">
+     <div class="first-menu__icon flex-row flex-center"><i class="fa fa-cogs"></i></div>
+     <div class="first-menu__text"><span>系统管理</span></div>
+     <div class="first-menu__arrow"></div>
+  </div>
+  </a>
+ </li>
+<li>
+<a href="#"  data-type="1" data-group="368" data-type="1">
+ <div class="first-menu__item flex-row flex-column-center">
+     <div class="first-menu__icon flex-row flex-center"><i class="fa fa-user"></i></div>
+     <div class="first-menu__text"><span>人事管理</span></div>
+     <div class="first-menu__arrow"></div>
+  </div>
+  </a>
+ </li>
+<li>
+<a href="#"  data-type="1" data-group="447" data-type="1">
+ <div class="first-menu__item flex-row flex-column-center">
+     <div class="first-menu__icon flex-row flex-center"><i class="fa fa-money"></i></div>
+     <div class="first-menu__text"><span>薪资考勤</span></div>
+     <div class="first-menu__arrow"></div>
+  </div>
+  </a>
+ </li>
+<li>
+<a href="#"  data-type="1" data-group="437" data-type="1">
+ <div class="first-menu__item flex-row flex-column-center">
+     <div class="first-menu__icon flex-row flex-center"><i class="fa fa-tasks"></i></div>
+     <div class="first-menu__text"><span>行政管理</span></div>
+     <div class="first-menu__arrow"></div>
+  </div>
+  </a>
+ </li>
+<li>
+<a href="#"  data-type="1" data-group="477" data-type="1">
+ <div class="first-menu__item flex-row flex-column-center">
+     <div class="first-menu__icon flex-row flex-center"><i class="fa fa-suitcase"></i></div>
+     <div class="first-menu__text"><span>品牌管理</span></div>
+     <div class="first-menu__arrow"></div>
+  </div>
+  </a>
+ </li>
+<li>
+<a href="#"  data-type="1" data-group="369" data-type="1">
+ <div class="first-menu__item flex-row flex-column-center">
+     <div class="first-menu__icon flex-row flex-center"><i class="fa fa-rmb"></i></div>
+     <div class="first-menu__text"><span>财务系统</span></div>
+     <div class="first-menu__arrow"></div>
+  </div>
+  </a>
+ </li>
+<li>
+<a href="#"  data-type="1" data-group="473" data-type="1">
+ <div class="first-menu__item flex-row flex-column-center">
+     <div class="first-menu__icon flex-row flex-center"><i class="fa fa-users"></i></div>
+     <div class="first-menu__text"><span>市场管理</span></div>
+     <div class="first-menu__arrow"></div>
+  </div>
+  </a>
+ </li>
+<li>
+<a href="#"  data-type="1" data-group="407" data-type="1">
+ <div class="first-menu__item flex-row flex-column-center">
+     <div class="first-menu__icon flex-row flex-center"><i class="fa fa-cube"></i></div>
+     <div class="first-menu__text"><span>业务管理</span></div>
+     <div class="first-menu__arrow"></div>
+  </div>
+  </a>
+ </li>
+<li>
+<a href="#"  data-type="1" data-group="467" data-type="1">
+ <div class="first-menu__item flex-row flex-column-center">
+     <div class="first-menu__icon flex-row flex-center"><i class="fa fa-cloud"></i></div>
+     <div class="first-menu__text"><span>实用工具</span></div>
+     <div class="first-menu__arrow"></div>
+  </div>
+  </a>
+ </li>
+<li>
+<a href="#"  data-type="1" data-group="413" data-type="1">
+ <div class="first-menu__item flex-row flex-column-center">
+     <div class="first-menu__icon flex-row flex-center"><i class="fa fa-file-word-o"></i></div>
+     <div class="first-menu__text"><span>文档中心</span></div>
+     <div class="first-menu__arrow"></div>
+  </div>
+  </a>
+ </li>
+
+            </ul>
+
+        </div>
+    </div>
+    <!-- 二级菜单容器（菜单收起时，二级菜单弹出用） -->
+    <div class="menu-popup menuInLeft" id="menuPopup">
+        
+    </div>
+    <!-- 三、四级菜单容器 -->
+    <div class="menu-spread" id="menuSpread">
+        <div class="menu-spread__close"><span class="i-icon-close"></span></div>
+        <div class="menu-spread__items" id="spreadItems">
+<div class="menu-spread__panel" data-group="304">
+<ul class="menu-spread__item">
+<li>日志管理</li>
+<li><a href="index?tid=304&pid=459&mid=973">工作计划</a></li>
+<li><a href="index?tid=304&pid=459&mid=797">我的工作日志</a></li>
+<li><a href="index?tid=304&pid=459&mid=831&831">日志查询</a></li>
+<li><a href="index?tid=304&pid=459&mid=832">日志分析</a></li>
+<li><a href="index?tid=304&pid=459&mid=983">工作周报</a></li>
+</ul>
+<ul class="menu-spread__item">
+<li>开元问答</li>
+<li><a href="index?tid=304&pid=488&mid=975">回答</a></li>
+</ul>
+<ul class="menu-spread__item">
+<li>意见箱</li>
+<li><a href="index?tid=304&pid=470&mid=885">我的意见箱</a></li>
+</ul>
+<ul class="menu-spread__item">
+<li>个人中心</li>
+<li><a href="index?tid=304&pid=426&mid=952">我的福利申请</a></li>
+<li><a href="index?tid=304&pid=426&mid=705">工作日历</a></li>
+<li><a href="index?tid=304&pid=426&mid=609">我的个人信息</a></li>
+<li><a href="index?tid=304&pid=426&mid=728">物品领用</a></li>
+<li><a href="index?tid=304&pid=426&mid=687">快递</a></li>
+<li><a href="index?tid=304&pid=426&mid=732">资产申购</a></li>
+<li><a href="index?tid=304&pid=426&mid=676">机票预订</a></li>
+<li><a href="index?tid=304&pid=426&mid=841">工作联系函</a></li>
+<li><a href="index?tid=304&pid=426&mid=882">额外绩效工作填报</a></li>
+<li><a href="index?tid=304&pid=426&mid=910">员工廉洁协议签订</a></li>
+<li><a href="index?tid=304&pid=426&mid=888">我的社保公积金变更</a></li>
+<li><a href="index?tid=304&pid=426&mid=984">结算办理进度</a></li>
+</ul>
+<ul class="menu-spread__item">
+<li>我的考勤薪资</li>
+<li><a href="index?tid=304&pid=367&mid=757">我的考勤日报</a></li>
+<li><a href="index?tid=304&pid=367&mid=758">我的考勤月报</a></li>
+<li><a href="index?tid=304&pid=367&mid=760">漏打卡情况说明</a></li>
+<li><a href="index?tid=304&pid=367&mid=759&onlyme">我的工资条</a></li>
+</ul>
+<ul class="menu-spread__item">
+<li>消息中心</li>
+<li><a href="index?tid=304&pid=406&mid=625">我收到的消息</a></li>
+<li><a href="index?tid=304&pid=406&mid=624&my=1">我发出消息</a></li>
+<li><a href="index?tid=304&pid=406&mid=633&status=1">资讯公告</a></li>
+<li><a href="index?tid=304&pid=406&mid=1010">我的签字确认</a></li>
+</ul>
+<ul class="menu-spread__item">
+<li>审批</li>
+<li><a href="index?tid=304&pid=425&mid=606&status=1">我的待办</a></li>
+<li><a href="index?tid=304&pid=425&mid=607&status=3">我的发起</a></li>
+<li><a href="index?tid=304&pid=425&mid=666">我的任务</a></li>
+<li><a href="index?tid=304&pid=425&mid=608&status=2">我的已办</a></li>
+<li><a href="index?tid=304&pid=425&mid=626">批量审批</a></li>
+<li><a href="index?tid=304&pid=425&mid=630">我的工作代理人</a></li>
+<li><a href="index?tid=304&pid=425&mid=814">我的知会</a></li>
+</ul>
+<ul class="menu-spread__item">
+<li>图书借阅</li>
+<li><a href="index?tid=304&pid=436&mid=698">图书馆</a></li>
+<li><a href="index?tid=304&pid=436&mid=699">借书记录</a></li>
+<li><a href="index?tid=304&pid=436&mid=734">还书记录</a></li>
+</ul>
+<ul class="menu-spread__item">
+<li>我的考试</li>
+<li><a href="index?tid=304&pid=422&mid=640&show=0">参加考试</a></li>
+<li><a href="index?tid=304&pid=422&mid=641&show=1">成绩查询</a></li>
+<li><a href="index?tid=304&pid=422&mid=642">阅卷</a></li>
+</ul>
+<ul class="menu-spread__item">
+<li>管理手册</li>
+<li><a href="index?tid=304&pid=466&mid=868">运营手册</a></li>
+</ul>
+<ul class="menu-spread__item">
+<li>工会活动</li>
+<li><a href="index?tid=304&pid=506&mid=1079">书法比赛</a></li>
+</ul>
+<ul class="menu-spread__item">
+<li>询价</li>
+<li><a href="index?tid=304&pid=497&mid=1044">人工询价</a></li>
+<li><a href="index?tid=304&pid=497&mid=817">询价账号申请</a></li>
+</ul>
+</div>
+<div class="menu-spread__panel" data-group="405">
+<ul class="menu-spread__item">
+<li>系统设置</li>
+<li><a href="index?tid=405&pid=374&mid=649">在线帮助</a></li>
+</ul>
+</div>
+<div class="menu-spread__panel" data-group="368">
+<ul class="menu-spread__item">
+<li>组织架构</li>
+<li><a href="index?tid=368&pid=370&mid=690">各部门基本信息地址</a></li>
+</ul>
+<ul class="menu-spread__item">
+<li>人员信息</li>
+<li><a href="index?tid=368&pid=371&mid=563">转正申请</a></li>
+<li><a href="index?tid=368&pid=371&mid=568">离职申请</a></li>
+<li><a href="index?tid=368&pid=371&mid=571">证件信息</a></li>
+<li><a href="index?tid=368&pid=371&mid=577">奖惩信息</a></li>
+</ul>
+<ul class="menu-spread__item">
+<li>请假管理</li>
+<li><a href="index?tid=368&pid=432&mid=667">请假申请</a></li>
+</ul>
+<ul class="menu-spread__item">
+<li>课程管理</li>
+<li><a href="index?tid=368&pid=461&mid=1000">评论管理</a></li>
+<li><a href="index?tid=368&pid=461&mid=1027">知识库投稿</a></li>
+</ul>
+</div>
+<div class="menu-spread__panel" data-group="447">
+<ul class="menu-spread__item">
+<li>绩效管理</li>
+<li><a href="index?tid=447&pid=453&mid=875">OKR填报</a></li>
+<li><a href="index?tid=447&pid=453&mid=876">OKR审批</a></li>
+<li><a href="index?tid=447&pid=453&mid=880">OKR批量评分</a></li>
+<li><a href="index?tid=447&pid=453&mid=872">DP负面清单</a></li>
+<li><a href="index?tid=447&pid=453&mid=878">CS满意度登记</a></li>
+<li><a href="index?tid=447&pid=453&mid=879">CS满意度审核</a></li>
+</ul>
+</div>
+<div class="menu-spread__panel" data-group="437">
+<ul class="menu-spread__item">
+<li>会议管理</li>
+<li><a href="index?tid=437&pid=430&mid=658">会议室预约</a></li>
+<li><a href="index?tid=437&pid=430&mid=662">会议纪要管理</a></li>
+<li><a href="index?tid=437&pid=430&mid=663">会议纪要查看</a></li>
+</ul>
+<ul class="menu-spread__item">
+<li>其它</li>
+<li><a href="index?tid=437&pid=445&mid=753">用印申请</a></li>
+</ul>
+<ul class="menu-spread__item">
+<li>软件锁管理</li>
+<li><a href="index?tid=437&pid=462&mid=845">软件锁登记</a></li>
+</ul>
+</div>
+<div class="menu-spread__panel" data-group="477">
+<ul class="menu-spread__item">
+<li>品牌管理</li>
+<li><a href="index?tid=477&pid=476&mid=919">品牌设计</a></li>
+<li><a href="index?tid=477&pid=476&mid=918">文案编写</a></li>
+<li><a href="index?tid=477&pid=476&mid=915">投稿管理</a></li>
+</ul>
+</div>
+<div class="menu-spread__panel" data-group="369">
+<ul class="menu-spread__item">
+<li>开票管理</li>
+<li><a href="index?tid=369&pid=377&mid=525">开票信息</a></li>
+</ul>
+<ul class="menu-spread__item">
+<li>回款管理</li>
+<li><a href="index?tid=369&pid=379&mid=535">回款登记</a></li>
+<li><a href="index?tid=369&pid=379&mid=536">回款分割</a></li>
+<li><a href="index?tid=369&pid=379&mid=745">绩效奖励查询</a></li>
+<li><a href="index?tid=369&pid=379&mid=849">个人绩效奖励账户</a></li>
+</ul>
+<ul class="menu-spread__item">
+<li>报销管理</li>
+<li><a href="index?tid=369&pid=380&mid=531">借支单</a></li>
+<li><a href="index?tid=369&pid=380&mid=533">费用报销</a></li>
+<li><a href="index?tid=369&pid=380&mid=539">差旅交通报销</a></li>
+</ul>
+</div>
+<div class="menu-spread__panel" data-group="473">
+<ul class="menu-spread__item">
+<li>市场管理</li>
+<li><a href="index?tid=473&pid=433&mid=748">前期项目备案</a></li>
+<li><a href="index?tid=473&pid=433&mid=920">业务开发备案</a></li>
+<li><a href="index?tid=473&pid=433&mid=964">B-G类开发备案</a></li>
+<li><a href="index?tid=473&pid=433&mid=750">投标审批</a></li>
+<li><a href="index?tid=473&pid=433&mid=913">投标测算</a></li>
+</ul>
+</div>
+<div class="menu-spread__panel" data-group="407">
+<ul class="menu-spread__item">
+<li>项目管理</li>
+<li><a href="index?tid=407&pid=431&mid=521">咨询合同登记</a></li>
+<li><a href="index?tid=407&pid=431&mid=664">项目信息</a></li>
+<li><a href="index?tid=407&pid=431&mid=665">任务派发单</a></li>
+<li><a href="index?tid=407&pid=431&mid=612">成果审批</a></li>
+<li><a href="index?tid=407&pid=431&mid=616">绩效奖励申请</a></li>
+<li><a href="index?tid=407&pid=431&mid=674">任务详情</a></li>
+<li><a href="index?tid=407&pid=431&mid=958">计划出报告项目</a></li>
+<li><a href="index?tid=407&pid=431&mid=894">项目印章申请</a></li>
+<li><a href="index?tid=407&pid=431&mid=950">质量处罚单</a></li>
+<li><a href="index?tid=407&pid=431&mid=982">数据库审核</a></li>
+<li><a href="index?tid=407&pid=431&mid=1016">项目文件存档</a></li>
+<li><a href="index?tid=407&pid=431&mid=988">项目月报审核</a></li>
+<li><a href="index?tid=407&pid=431&mid=959">nas文件删除申请</a></li>
+</ul>
+<ul class="menu-spread__item">
+<li>收款计划</li>
+<li><a href="index?tid=407&pid=428&mid=651">项目收款计划</a></li>
+<li><a href="index?tid=407&pid=428&mid=654">部门收款计划查询</a></li>
+</ul>
+</div>
+<div class="menu-spread__panel" data-group="467">
+<ul class="menu-spread__item">
+<li>基础计算</li>
+<li><a href="index?tid=467&pid=468&mid=848&type1=1">基础拆分</a></li>
+<li><a href="index?tid=467&pid=468&mid=893&type1=5">表单项合并</a></li>
+<li><a href="index?tid=467&pid=468&mid=946&type1=10">单元格保护破解</a></li>
+</ul>
+<ul class="menu-spread__item">
+<li>专项计算</li>
+<li><a href="index?tid=467&pid=469&mid=871&type1=2">财务加和合并</a></li>
+<li><a href="index?tid=467&pid=469&mid=887&type1=3">共享作业中心做法库转清单</a></li>
+<li><a href="index?tid=467&pid=469&mid=906&type1=8">广联达钢筋底稿转指标表、管理表格</a></li>
+<li><a href="index?tid=467&pid=469&mid=924&type1=9">清单处理云计算工具</a></li>
+</ul>
+<ul class="menu-spread__item">
+<li>工具箱</li>
+<li><a href="index?tid=467&pid=471&mid=892">信息结构化处理工具</a></li>
+<li><a href="index?tid=467&pid=471&mid=897">常用插件</a></li>
+<li><a href="index?tid=467&pid=471&mid=972">质控检查</a></li>
+</ul>
+</div>
+<div class="menu-spread__panel" data-group="413">
+<ul class="menu-spread__item">
+<li>管理类文档</li>
+<li><a href="index?tid=413&pid=415&mid=623">文档管理</a></li>
+<li><a href="index?tid=413&pid=415&mid=671">共享文档浏览</a></li>
+</ul>
+<ul class="menu-spread__item">
+<li>项目文档</li>
+<li><a href="index?tid=413&pid=427&mid=647">项目文档体系</a></li>
+<li><a href="index?tid=413&pid=427&mid=648&type=3">项目文档管理</a></li>
+</ul>
+</div>
+
+        </div>
+    </div>
+    <!-- /.sidebar --> 
+
+<!-- /.sidebar -->
+<!-- 主要内容区 -->
+<!-- content -->
+<div class="main-content">
+    <div class="container-fluid">
+        <div id="ajaxList">
+            <div class="desk-warpper">
+                <div class="flex-row">
+                    <div class="flex-item desk-conut">
+                        <!-- 左侧 -->
+                        <!-- 基本统计 -->
+
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-3" style="width:22%;">
+                                <div class="desk-conut__itembd desk-conut__item-hcbd">
+                                    <div class="desk-conut__item "
+                                         style="height:215px;padding-left: 0px;padding-top:0px;">
+                                        <div class="carousel-container">
+                                            <div class="carousel">
+                                                <div class="carousel-inner">
+                                                    
+                                                        <div class="carousel-item active">
+                                                            <img src="images/new/newClass-1.png"
+                                                                 alt="Image 1">
+                                                            <div class="carousel-caption">
+                                                                <h3>
+                                                                    <a href="https://ksp.karon.cn/HrClassInfo_player?id=713834238376069278&flag=2"
+                                                                       target="_blank">房屋和市政工程危大工程专项方案编制和审查</a></h3>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                        <div class="carousel-item ">
+                                                            <img src="images/new/newClass-2.png"
+                                                                 alt="Image 2">
+                                                            <div class="carousel-caption">
+                                                                <h3>
+                                                                    <a href="https://ksp.karon.cn/HrClassInfo_player?id=510795708602029187&flag=2"
+                                                                       target="_blank">AI赋能工程造价业务</a></h3>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                        <div class="carousel-item ">
+                                                            <img src="images/new/newClass-3.png"
+                                                                 alt="Image 3">
+                                                            <div class="carousel-caption">
+                                                                <h3>
+                                                                    <a href="https://ksp.karon.cn/HrClassInfo_player?id=362965261908089042&flag=2"
+                                                                       target="_blank">AI辅助编程及办公自动化</a></h3>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                    <div class="floating-link">
+                                                        <div class="desk-conut__item desk-conut__item-viedo"></div>
+                                                        <div style="color: white;padding-left: 20px;letter-spacing: 2px;">
+                                                            <a href="/Knowledge_index" target="_blank">新课推送</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</a>
+                                                <a class="carousel-control next" onclick="moveSlide(1)">&#10095;</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="desk-conut__itembd desk-conut__item-hcbd">
+                                    <div class="desk-conut__item desk-conut__item-hc" style="height: 100px;">
+                                        <p>
+                                            <span class="num"></span><span></span><br>
+                                            <span style="font-size: calc(0.7vw + 0.3em);letter-spacing: 2px;"><a
+                                                    href="https://book.yunzhan365.com/trhuf/jtxw/mobile/index.html"
+                                                    target="_blank">产品手册</a></span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="desk-conut__itembd desk-conut__item-hcbd"
+                                     style="margin-top: 5%;height: 100px;">
+                                    
+                                        
+                                        
+                                            <div class="desk-conut__item-nc">
+                                                <p>
+                                                    <span style="font-size: calc(0.7vw + 0.3em);letter-spacing: 2px;"><a
+                                                            href="https://www.karon.cn/products-11.html"
+                                                            target="_blank">集团内刊</a></span>
+                                                </p>
+                                            </div>
+                                        
+                                    
+                                    <!-- <p>
+                                                <span class="num"></span><span></span><br>
+                                                <span style="font-size: 17px;font-weight: lighter;"><a href="https://www.karon.cn/products-11.html">开元咨询集团内刊</a></span>
+                                            </p> -->
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-3" style="width:17%;">
+                                <div class="desk-conut__itembd desk-conut__item-onebd">
+                                    <div class="desk-conut__item desk-conut__item-one" style="height: 215px;">
+                                        <div style="display: flex;flex-direction: column;">
+                                            <div style="width: 65px;height: 80px;background-image: url(images/new/myprojectsnumber.png);background-size: cover;background-position: center;background-repeat: no-repeat;border-radius: 7px;"></div>
+                                            <div style="text-align: center;padding-left:35px;">
+                                                <span style="font-size: calc(1.6vw + 1.2em);font-weight: bold;color:#00A5EF; ">67</span><br>
+                                                <span style="font-size: calc(0.5vw + 1em);font-weight: lighter;font-weight:bold;color:#ADAFAF; "><a
+                                                        href="index?tid=407&pid=431&mid=664">我的项目</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3" style="width:17%;">
+                                <div class="desk-conut__itembd desk-conut__item-threebd">
+                                    <div class="desk-conut__item desk-conut__item-three" style="height: 215px;">
+                                        <div style="display: flex;flex-direction: column;">
+                                            <div style="width: 65px;height: 80px;background-image: url(images/new/myStartWorks.png);background-size: cover;background-position: center;background-repeat: no-repeat;border-radius: 7px;"></div>
+                                            <div style="text-align: center;padding-left:35px;">
+                                                <span style="font-size: calc(1.6vw + 1.2em);font-weight: bold;color:#2880B3; ">737</span><br>
+                                                <span style="font-size: calc(0.5vw + 1em);font-weight: lighter;font-weight:bold;color:#ADAFAF; "><a
+                                                        href="index?tid=304&pid=425&mid=607&status=3">我的发起</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-3" style="width:17%;">
+                                <div class="desk-conut__itembd desk-conut__item-fourbd">
+                                    <div class="desk-conut__item desk-conut__item-four" style="height: 215px;">
+                                        <div style="display: flex;flex-direction: column;">
+                                            <div style="width: 65px;height: 80px;background-image: url(images/new/myWaitingProcess.png);background-size: cover;background-position: center;background-repeat: no-repeat;border-radius: 7px;"></div>
+                                            <div style="text-align: center;padding-left:35px;">
+                                                <span style="font-size: calc(1.6vw + 1.2em);font-weight: bold;color:#8979FA; ">17</span><br>
+                                                <span style="font-size: calc(0.5vw + 1em);font-weight: lighter;font-weight:bold;color:#ADAFAF; "><a
+                                                        href="index?tid=304&pid=425&mid=606&status=1">我的待办</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- <p style="text-align: center;margin-left:25%;padding-top: 33%;"><span style="font-size: 50px;font-weight: bold;color:#8979FA; ">17<script>var num = glodon_processing();if(num>0){document.write("+"+num);}</script></span><br>
+                                            <span style="font-size: 19px;font-weight: lighter;font-weight:bold;"><a href="index?tid=304&pid=425&mid=606&status=1">我的待办</a></span>
+                                        </p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <div class="desk-conut__itembd desk-conut__item-onebd">
+                                        <div class="desk-conut__item desk-conut__item-one">
+                                        <p><span class="num">67</span><span>个</span><br>
+                                            <span style="font-size: 15px"><a href="index?tid=407&pid=431&mid=664">我的项目</a></span>
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <div class="desk-conut__itembd desk-conut__item-onebd">
+                                        <div class="desk-conut__item desk-conut__item-one">
+                                        <p><span class="num">67</span><span>个</span><br>
+                                            <span style="font-size: 15px"><a href="index?tid=407&pid=431&mid=664">我的项目</a></span>
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <div class="desk-conut__itembd desk-conut__item-threebd">
+                                        <div class="desk-conut__item desk-conut__item-three">
+                                        <p><span class="num">737</span><span>个</span><br>
+                                            <span style="font-size: 15px"><a href="index?tid=304&pid=425&mid=607&status=3">我的发起</a></span>
+                                        </p>
+                                    </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <div class="desk-conut__itembd desk-conut__item-fourbd">
+                                        <div class="desk-conut__item desk-conut__item-four">
+                                        <p><span class="num">17<script>var num = glodon_processing();if(num>0){document.write("+"+num);}</script></span><span>个</span><br>
+                                            <span style="font-size: 15px"><a href="index?tid=304&pid=425&mid=606&status=1">我的待办</a></span>
+                                        </p>
+                                    </div>
+                                    </div>
+
+                                </div>
+                            </div> -->
+                        <div class="row">
+                            <!-- 天气-->
+                            <div class="col-12 col-md-6 col-lg-3" style="margin-top: 20px;">
+                                <div class="weather-box" style="box-shadow: 0px 1px 5px grey;">
+                                    <div class="weather-img">
+                                        <img src='assets/images/weather-new/未知.png' style='width:auto;height:70%;'
+                                             alt=''>
+                                        <div style="float: left;color: #eeeeee;font-size: 13px;text-align: center;">未知</div>
+                                    </div>
+                                    <div class="weather">
+                                        <div>城市：未知</div>
+                                        <div>风向：未知</div>
+                                        <div>温度：未知℃</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 宜、忌 -->
+                            <div class="col-12 col-md-6 col-lg-3" style="margin-top: 20px;">
+                                <div class="time-box" style="box-shadow: 0px 1px 5px grey;">
+                                    <div style="width: 30%;height: 120px;background: linear-gradient(to bottom, #ab94fa ,#8777fa);float: left;border-radius: 12px;">
+                                        <div style="text-align: center;margin-top: 12px;color: #eeeeee;font-size:18px;font-weight: 5;">5月</div>
+                                        <div style="text-align: center;color: #eeeeee;font-size:33px;font-weight: bold;">15</div>
+                                        <div style="text-align: center;color: #eeeeee;font-size:15px;font-weight: 5;">周五</div>
+                                    </div>
+                                    <div class="incident-box">
+                                        <div style="margin-left: 7px;">阴历：三月廿九</div>
+                                        <div style="display: flex;">
+                                            <div class="fontBack" style="background-color:#5FC9A0;text-align: center;">
+                                                宜
+                                            </div>
+                                            <div>5G冲浪&nbsp;&nbsp;奋进&nbsp;&nbsp;坚持</div>
+                                        </div>
+                                        <div style="display: flex;">
+                                            <div class="fontBack" style="background-color:#DB5457;text-align: center;">
+                                                忌
+                                            </div>
+                                            <div class="fontSet">浑浑噩噩&nbsp;&nbsp;迟到&nbsp;&nbsp;早退</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 日历 -->
+                            <div class="col-12 col-md-6 col-lg-3" style="margin-top: 20px;width: 48%;">
+                                <div class="calenderBox">
+                                    <div class="theme" onclick="window.location.href='index?tid=304&pid=426&mid=705'">
+                                        <ul>
+                                            
+                                        </ul>
+                                        <ul>
+                                            
+                                        </ul>
+                                        <ul>
+                                            
+                                        </ul>
+                                        <ul>
+                                            
+                                        </ul>
+                                        <ul>
+                                            
+                                        </ul>
+                                        <ul>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- 新闻公告 -->
+                            <div class="col-12 col-md-6 col-lg-3" style="width: 73%;">
+                                <div class="dflex noticed">
+                                    <div style="background-color: #fff;height:260px;border-radius: 12px;box-shadow: 0px 1px 5px grey;margin-top: 20px;">
+                                        <div style="border-bottom: 1px solid #EEEEEE;padding: 0px 6px" class="dflex">
+                                            <div class="container">
+                                                <ul class="tabs">
+                                                    <!-- 重点关注 -->
+                                                    <li class="tab active">
+                                                        <!-- <img src="images/new/notice2.png" alt="" style="width:20px;height: 20px"> -->
+                                                        重点关注
+                                                        <!-- </img> -->
+                                                    </li>
+                                                    <!-- 行业动态 -->
+                                                    <li class="tab">
+                                                        <!-- <img src="images/new/inform.png" alt="" style="width:20px;height: 20px;"> -->
+                                                        党建通知
+                                                        <!-- </img> -->
+                                                    </li>
+                                                    <!-- 新闻公告 -->
+                                                    <li class="tab">
+                                                        <!-- <img src="images/new/emphasis.png" alt="" style="width:20px;height: 20px;"> -->
+                                                        培训通知
+                                                        <!-- </img> -->
+                                                    </li>
+                                                    <!-- 公司制度 -->
+                                                    <li class="tab">
+                                                        <!-- <img src="images/new/institution.png" alt="" style="width:20px;height: 20px;"> -->
+                                                        新闻公告
+                                                        <!-- </img> -->
+                                                    </li>
+                                                    <!-- 通知 -->
+                                                    <li class="tab">
+                                                        <!-- <img src="images/new/profession1.png" alt="" style="width:19px;height: 19px;"> -->
+                                                        公司制度
+                                                        <!-- </img> -->
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <p style="margin-top: -28px;width: 10%;margin-left: 96%">
+                                                    <span style="font-size: 12px">
+                                                    <a href="index?tid=304&pid=406&mid=633&status=1&init=122009272560022569">......</a>
+                                                    </span>
+                                            </p>
+                                        </div>
+                                        <ul class="contents">
+                                            <!-- 重点关注 -->
+                                            <li class="content show">
+                                                <ul>
+                                                    
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'927003312898010550','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        关于组织参加首届工程造价行业职业技能竞赛及相关激励政策的通知
+                                                                </a>
+                                                                <time>
+                                                                    04-03
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'690442318338047110','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        关于2026年春节放假的通知
+                                                                </a>
+                                                                <time>
+                                                                    01-16
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'985057625902094540','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        关于“《建设工程工程量清单计价标准》（GBT50500-2024）及计量标准”考试的通知
+                                                                </a>
+                                                                <time>
+                                                                    08-01
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'517036019504057430','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        关于开元咨询集团办公场地搬迁的通知
+                                                                </a>
+                                                                <time>
+                                                                    05-08
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'604805550081014672','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        关于对苍溪分公司处罚与经济赔偿的决定
+                                                                </a>
+                                                                <time>
+                                                                    04-08
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'732444280132035605','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        关于新技术、新业态需求侧研究助力市场开拓、造价业务高质量发展的实施意见（征求意见稿）
+                                                                </a>
+                                                                <time>
+                                                                    04-07
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'778266360243087509','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        关于规范造价咨询业务报告签章存档等要求的通知（征求意见稿）
+                                                                </a>
+                                                                <time>
+                                                                    03-31
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'175501838757036792','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        关于公司内部人员执业资格证书“挂证”自查自纠的通知
+                                                                </a>
+                                                                <time>
+                                                                    11-05
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'55889215523053996','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        开元咨询集团2024版《企业文化手册》正式发布
+                                                                </a>
+                                                                <time>
+                                                                    07-02
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                </ul>
+                                            </li>
+
+                                            <!-- 行业动态 -->
+                                            <li class="content">
+                                                <ul>
+                                                    
+                                                </ul>
+                                            </li>
+
+                                            <!-- 新闻公告 -->
+                                            <li class="content">
+                                                <ul>
+                                                    
+                                                        <!-- 0 -->
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'465381835245097971','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        关于开展“AI辅助编程与应用场景”主题分享培训的通知</a>
+                                                                <time>
+                                                                    05-07
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        <!-- 1 -->
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'330441405700047846','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        关于开展“经济发展新常态下城市更新行动的持续推进与科学实施”主题培训的通知</a>
+                                                                <time>
+                                                                    04-01
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        <!-- 2 -->
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'322188021477091609','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        开元演讲成长社2026年第2期演讲例会</a>
+                                                                <time>
+                                                                    03-19
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        <!-- 3 -->
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'370864050540040738','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        关于“2024园林绿化与仿古建筑新清单计量标准”主题培训的通知</a>
+                                                                <time>
+                                                                    10-16
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        <!-- 4 -->
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'789931330228070776','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        关于举办“职场个人IP打造”专题培训的通知</a>
+                                                                <time>
+                                                                    08-22
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        <!-- 5 -->
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'61998753985040195','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        关于“全过程工程咨询收费计算方法与实操”培训的通知</a>
+                                                                <time>
+                                                                    08-19
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        <!-- 6 -->
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'865879335643017849','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        关于“《房屋建筑与装饰工程工程量计算标准》、《通用安装工程工程量计算标准》”主题培训的通知</a>
+                                                                <time>
+                                                                    07-16
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        <!-- 7 -->
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'551369660573033821','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        关于“补短板、促消费激活城市更新底层动力”培训的通知</a>
+                                                                <time>
+                                                                    07-15
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        <!-- 8 -->
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'344560932918041769','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        关于“《建设工程工程量清单计价标准》（GB/T50500-2024）”主题培训的通知</a>
+                                                                <time>
+                                                                    07-04
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                </ul>
+                                            </li>
+
+                                            <!-- 公司制度 -->
+                                            <li class="content">
+                                                <ul>
+                                                    <li class="dflex">
+                                                        <a class="text_ell"
+                                                           href="FinContract_downLoad?id=592081963956089716">财务中心粘贴单模板下载</a>
+                                                        <time></time>
+                                                    </li>
+                                                    
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'439758639650057064','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        2025年终工作汇报PPT模板正式发布！
+                                                                </a>
+                                                                <time>
+                                                                    12-18
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'263036598879070469','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        大寒海报
+                                                                </a>
+                                                                <time>
+                                                                    01-20
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'188916015990093706','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        关于举办健康知识讲座及员工体检报告解读的通知
+                                                                </a>
+                                                                <time>
+                                                                    09-22
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'687017802658097412','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        立秋
+                                                                </a>
+                                                                <time>
+                                                                    08-08
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'26330128717013863','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        八一建军节
+                                                                </a>
+                                                                <time>
+                                                                    08-01
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'412365531320001744','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        集团早报
+                                                                </a>
+                                                                <time>
+                                                                    07-18
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'142568800473071140','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        集团早报
+                                                                </a>
+                                                                <time>
+                                                                    07-17
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'983975689785031378','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        集团早报
+                                                                </a>
+                                                                <time>
+                                                                    07-14
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'6427015758007816','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        小暑
+                                                                </a>
+                                                                <time>
+                                                                    07-07
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                </ul>
+                                            </li>
+
+                                            <!-- 通知 -->
+                                            <li class="content">
+                                                <ul>
+                                                    
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'556497469708016959','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        关于发布《印章管理办法》的通知
+                                                                </a>
+                                                                <time>
+                                                                    05-08
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'278685764427067945','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        关于新技术、新业态需求侧研究助力市场开拓、造价业务高质量发展的实施意见
+                                                                </a>
+                                                                <time>
+                                                                    05-08
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'862548069375089263','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        关于规范造价咨询业务报告签章存档等要求的通知
+                                                                </a>
+                                                                <time>
+                                                                    05-08
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'47628267007079698','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        数据安全保密承诺书
+                                                                </a>
+                                                                <time>
+                                                                    03-07
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                        
+                                                            <li class="dflex">
+                                                                <a class="text_ell"
+                                                                   href="PubInfo_view?jsonParams={'id':'565024798987088169','flag':'1','isAjax':'4'}"
+                                                                   target="_blank">
+                                                                        员工手册
+                                                                </a>
+                                                                <time>
+                                                                    12-06
+                                                                </time>
+                                                            </li>
+                                                        
+                                                    
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 快捷菜单 -->
+                            <div class="col-12 col-md-6 col-lg-3" style="width: 25%;">
+                                <div class="chart">
+                                    <div class="dflex">
+                                        <span style="border-left: 4px solid #FF9D0B;padding-left: 8px;font-weight: 500;">快捷菜单</span>
+                                        <!--img src="images/new/add.png" alt="设置快捷菜单" onclick="setShutcut()" style="width:20px;height: 20px"-->
+                                        <button type="button" class="shutcutButton" alt="设置快捷菜单"
+                                                onclick="setShutcut()"><i class="fa fa-plus"></i></button>
+                                    </div>
+                                    <!-- 快捷键内容 -->
+                                    <div class="chart_content">
+                                        <div>
+                                            
+                                            
+                                                <p>
+                                                    <img src="images/new/plan.png" alt="">
+                                                    <span><a href="index?tid=368&pid=432&mid=667"> 请假申请 </a></span>
+                                                </p>
+                                                <p>
+                                                    <img src="images/new/plan.png" alt="">
+                                                    <span><a href="index?tid=369&pid=380&mid=531">借支</a></span>
+                                                </p>
+
+                                                <p>
+                                                    <img src="images/new/plan.png" alt="">
+                                                    <span><a href="index?tid=369&pid=380&mid=533">费用</a>、<a
+                                                            href="index?tid=369&pid=380&mid=539">差旅</a>报销 </span>
+                                                </p>
+                                                <p>
+                                                    <img src="images/new/plan.png" alt="">
+                                                    <span><a href="index?tid=437&pid=445&mid=753">用印申请</a></span>
+                                                </p>
+                                                <p>
+                                                    <img src="images/new/plan.png" alt="">
+                                                    <span><a href="index?tid=304&pid=426&mid=676">机票订购 </a> </span>
+                                                </p>
+                                                <!-- <p >
+                                                <img src="images/new/plan.png" alt="" >
+                                                <span ><a href="index?tid=368&pid=371&mid=508">人员信息 </a></span>
+                                                </p>
+                                                <p >
+                                                <img src="images/new/plan.png" alt="" >
+                                                <span ><a href="index?tid=407&pid=433&mid=681">客户</a>、<a href="index?tid=369&pid=377&mid=525">开票 </a></span>
+                                                </p>
+                                                <p >
+                                                <img src="images/new/plan.png" alt="" >
+                                                <span ><a href="index?tid=407&pid=431&mid=521">咨询合同</a>、<a href="index?tid=407&pid=431&mid=664">项目 </a></span>
+                                                </p>
+                                                <p >
+                                                <img src="images/new/plan.png" alt="" >
+                                                <span ><a href="index?tid=407&pid=431&mid=665">成果审批</a> </span>
+                                                </p>
+                                                <p >
+                                                <img src="images/new/plan.png" alt="" >
+                                                <span ><a href="index?tid=407&pid=433&mid=774">投标保证金</a> </span>
+                                                </p> -->
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desk-right">
+                        <!-- 右侧 -->
+                        <div style="background-color: #fff">
+                            <div style="border-bottom: 1px solid #ccc;padding: 10px 20px;border-radius: 5px;box-shadow: 0px 1px 5px grey;"
+                                 class="dflex_right">
+                                <span style="border-left: 4px solid #FF9D0B;padding-left: 8px;font-weight: 500">快速进入</span>
+                                <img src="images/new/menu.png" alt="" style="width:20px;height: 20px">
+                            </div>
+                            <div class="list-unstyled desk-rlist othersys">
+                                <div class="other-item" style="">
+                                    <a href="SSORedirect?id=862834747207069406" target="_blank"><img
+                                            src="images/three/party.jpg"><br>智慧党建</a>
+                                </div>
+                                <div class="other-item" style="">
+                                    <a href="https://portal.karon.net.cn/1010" target="_blank"><img
+                                            src="images/three/www.jpg"><br>党委官网</a>
+                                </div>
+                                <div class="other-item" style="">
+                                    <a href="https://ksp.karon.cn/index?tid=304&pid=497&mid=1044"><img
+                                            src="images/three/db.jpg"><br>人工询价</a>
+                                </div>
+
+
+                                <div class="other-item" style="">
+									
+
+
+
+
+
+
+
+
+    <a href="#" onclick="showKnowledge()"><img  src="images/three/knowledge.png" style="width: 60px;height: 60px;"><br>培训中心</a>
+                                </div>
+
+                                
+
+                                
+                                    <div class="other-item" style="">
+                                        <a href="/SSORedirect?id=247432807069014635&redirect=/database/dataQuery/933499437511076150"
+                                           target="_blank"><img height="50px" src="images/three/datasearch.svg"><br>数据查询</a>
+                                    </div>
+                                
+                                
+                                
+                            </div>
+                        </div>
+
+                        <div style="background-color: #fff">
+                            <div style="border-bottom: 1px solid #ccc;padding: 10px 20px;border-radius: 5px;box-shadow: 0px 1px 5px grey;"
+                                 class="dflex_right">
+                                <span style="border-left: 4px solid #FF9D0B;padding-left: 8px;font-weight: 500">我的待办</span>
+                                <img src="images/new/menu.png" alt="" style="width:20px;height: 20px">
+                            </div>
+                            <ul class="list-unstyled desk-rlist">
+                                
+                                    
+                                        <li>
+                                            <a href="index?tid=304&pid=425&mid=606&status=1&doid=327151729903034128">
+                                                <time class="desk-rlist__unit">03-30</time>
+                                                <p class="desk-rlist__title">关于【二次复核】【二次复核】【二次复核】温江区金马街道片区农业产业园区及配套设施建设项目-排水管网治理项目-变更预审11报告号编码为开元零星字(2025)川第14079号的造价-用印申请</p>
+                                            </a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li>
+                                            <a href="index?tid=304&pid=425&mid=606&status=1&doid=789625149284042352">
+                                                <time class="desk-rlist__unit">03-27</time>
+                                                <p class="desk-rlist__title">关于江东街道路剩余及返修工程-认质认价的造价-成果审批</p>
+                                            </a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li>
+                                            <a href="index?tid=304&pid=425&mid=606&status=1&doid=386821901964027123">
+                                                <time class="desk-rlist__unit">01-27</time>
+                                                <p class="desk-rlist__title">关于温江区金马街道片区农业产业园区及配套设施建设项目-排水管网治理项目-第7期进度款报告号编码为开元进度字(2026)川第01087号的造价-用印申请</p>
+                                            </a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li>
+                                            <a href="index?tid=304&pid=425&mid=606&status=1&doid=920414735286083271">
+                                                <time class="desk-rlist__unit">01-27</time>
+                                                <p class="desk-rlist__title">关于成名高速公路新增凤凰互通立交工程-认质认价(第1批次)报告号编码为开元过控询价字(2026)川第01276号的造价-用印申请</p>
+                                            </a>
+                                        </li>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                <li>【您平均审批时长5.28天！】</li>
+                            </ul>
+                        </div>
+                        <div style="background-color: #fff;">
+                            <div style="border-bottom: 1px solid #ccc;padding: 10px 20px;border-radius: 5px;box-shadow: 0px 1px 5px grey;"
+                                 class="dflex_right">
+                                <span style="border-left: 4px solid #FF9D0B;padding-left: 8px;font-weight: 500">工作任务</span>
+                                <img src="images/new/menu.png" alt="" style="width:20px;height: 20px">
+                            </div>
+                            <ul class="list-unstyled desk-rlist desk-rlist2">
+                                
+                                
+                                <li>暂无任务
+                                <li>
+                            </ul>
+                        </div>
+                        <!-- /.右侧 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="display: none;position: relative;" id="layerPubSystemVersionhtml">
+    <div style="height:240px;">
+        <table style="width:98%;" id="layertable" cellspacing="10" cellpadding="10">
+            <!--           -->
+            <textarea class="contentTextarea" readonly id="content" cols="46" rows="8"
+                      style="resize: none;border: none;padding: 20px 30px;font-size: 15px;color:#7D7D80;line-height: 23px;outline: none;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</textarea>
+            <!-- <tr><td><div id="content" style="padding: 30px;font-size: 15px;color:#7D7D80;"><br></div></td></tr> -->
+            <tr>
+                <td></td>
+            </tr>
+
+            <button style="position: fixed;bottom: 12px;right:33%;width: 30%;" type="button" class="btn  btn2"
+                    onclick="savePubSystemVersion('')" )
+            ">我知道了</button>
+        </table>
+    </div>
+</div>
+<div style="display:none;position: relative;" id="layerhtml">
+    <div style="height:410px;">
+        <table style="width:98%;" id="layertable" cellspacing="10" cellpadding="10">
+            <tr style="text-align: center;">
+                <td>
+                    <!--  -->
+                    <div style="font-size:20pt;margin-bottom: 20px;"></div>
+                </td>
+            </tr>
+            <tr style="text-align: center;">
+                <td>
+                    发布时间：
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="content"
+                         style="padding: 10px 0 10px 40px;width: 1000px;word-wrap: break-word;"></div>
+                    <hr>
+                    
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--  -->
+    
+        <button style="position: fixed;bottom: 12px;right: 50%" id="readButton" type="button" class="btn  btn1"
+                onclick="savePubInfo('',1,1)">我已阅读
+        </button>
+    
+
+
+    
+    <!--           -->
+</div>
+<div class="modal fade" id="myModal1" tabindex="-1" data-keyboard="false" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" style="width:80%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">close</span>
+                </button>
+                <h4 class="modal-title text-center">即将到期补贴提醒 </h4>
+
+            </div>
+            <div class="modal-body" style="overflow-y: auto;max-height:500px;">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th><input class="icheck check-all" type="checkbox" data-name="ids" name="all"></th>
+                        <th style="width: 20%">补贴标题</th>
+                        <th style="width: 10%">补贴人员</th>
+                        <th style="width: 10%">类别</th>
+                        <th style="width: 10%">金额</th>
+                        <th style="width: 20%">备注</th>
+                        <th style="width: 10%">开始日期</th>
+                        <th style="width: 10%">结束日期</th>
+                        <th style="width: 10%">延期日期</th>
+                        <th style="width: 10%">延期原因</th>
+                        <th nowrap>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="subsidytbody">
+                    
+                    </tbody>
+                </table>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="allYanqi()">批量延期</button>
+                <button type="button" class="btn btn-primary" onclick="allNoYanqi()">批量不延期</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal2" tabindex="-1" data-keyboard="false" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" style="width:400px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">close</span>
+                </button>
+                <h4 class="modal-title text-center">批量延期信息填写 </h4>
+
+            </div>
+            <div class="modal-body" style="max-height:280px;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">延期标题*：</label>
+                            <div class="fv-control"><input type="text" class="form-control  input-large"
+                                                           name="delaytitle"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">延期时间*：</label>
+                            <div class="fv-control"><input type="text"
+                                                           class="form-control input-large  laydateyearmonth"
+                                                           name="delayenddate"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">延期原因*：</label>
+                            <div class="fv-control"><input type="text" class="form-control input-large"
+                                                           name="delayreason"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="startFlow(this)">发起延期审批</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal" data-backdrop="static" tabindex="-1" data-keyboard="false" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width:80%; ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">
+                    <p style="text-align:center;line-height:150%">
+                        <span style=";font-family:黑体;line-height:150%;color:rgb(0,0,0);font-size:20px">员工廉洁工作承诺书</span>
+                    </p>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <section class="_editor">
+                    <p><br/></p>
+                </section>
+                <p style="text-indent:32px;line-height:150%">
+                    <span style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">致开元数智工程咨询集团有限公司：</span>
+                </p>
+                <p style="text-indent:32px;line-height:150%">
+                    <span style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">本人作为开元数智工程咨询集团有限公司的员工郑重承诺：</span>
+                </p>
+                <p style="text-indent:32px;line-height:150%">
+                    <span style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">本人在公司工作期间，自觉遵守党和国家工程建设领域的有关法律法规及廉政建设的相关规定，坚决拒绝</span><span
+                        style=";;font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px;background:rgb(255,255,0);background:rgb(255,255,0);font-family:宋体">商业贿赂</span><span
+                        style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">及其他</span><span
+                        style="font-family: 宋体; line-height: 150%; color: rgb(0, 0, 0); font-size: 16px;">不正当之商业行为的馈赠，服从公司安排，对所负责建设工程项目进</span><span
+                        style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">行成本管理工作。为保证工作成果文件的公正、公平、优质完成，作出下列承诺，供建设单位、施工单位和咨询机构监督执行。</span>
+                </p>
+                <p>
+                    <span style="font-family:宋体;color:rgb(0,0,0);font-weight:bold;font-size:14px">一、</span><strong><span
+                        style="font-family: 宋体;color: rgb(0, 0, 0);font-size: 14px">未经授权，不准超越本职业务和职权范围作出承诺</span></strong>
+                </p>
+                <p>
+                    <span style="font-family:宋体;color:rgb(0,0,0);font-weight:bold;font-size:14px">二、</span><strong><span
+                        style="font-family: 宋体;color: rgb(0, 0, 0);font-size: 14px">不准侵占、挪用或作假欺骗公司，损害公司利益</span></strong>
+                </p>
+                <p>
+                    <strong><span
+                            style="font-family: 宋体;color: rgb(0, 0, 0);font-size: 14px">三、不准利用公司资源违规获取</span></strong><strong><span
+                        style=";font-family: 宋体;color: rgb(0, 0, 0);font-size: 14px;background: rgb(255, 255, 0);font-family:宋体">收益</span></strong>
+                </p>
+                <p>
+                    <strong><span
+                            style="font-family: 宋体;color: rgb(0, 0, 0);font-size: 14px">四、未经批准不准在外兼职</span></strong>
+                </p>
+                <p>
+                    <strong><span
+                            style="font-family: 宋体;color: rgb(0, 0, 0);font-size: 14px">五、不准利用公款挥霍浪费</span></strong>
+                </p>
+                <p>
+                    <strong><span style="font-family: 宋体;color: rgb(0, 0, 0);font-size: 14px"><span
+                            style="font-family:宋体">六、未经批准，不准参加</span>"</span></strong><strong><span
+                        style=";font-family: 宋体;color: rgb(0, 0, 0);font-size: 14px;background: rgb(255, 255, 0);font-family:宋体">乙方</span></strong><strong><span
+                        style="font-family: 宋体;color: rgb(0, 0, 0);font-size: 14px">安排的宴请、旅游、健身和高档娱乐等活动</span></strong>
+                </p>
+                <p>
+                    <strong><span
+                            style="font-family: 宋体;color: rgb(0, 0, 0);font-size: 14px">七、不准以制度不适用为由，破坏制度的权威性</span></strong>
+                </p>
+                <p>
+                    <strong><span
+                            style="font-family: 宋体;color: rgb(0, 0, 0);font-size: 14px">八、不准泄露或出卖公司秘密</span></strong>
+                </p>
+                <p>
+                    <strong><span
+                            style="font-family: 宋体;color: rgb(0, 0, 0);font-size: 14px">九、遇到需回避事项，不准隐瞒，应主动回避</span></strong>
+                </p>
+                <p>
+                    <span style="font-family:宋体;color:rgb(0,0,0);font-weight:bold;font-size:14px">十、</span><strong><span
+                        style="font-family: 宋体;color: rgb(0, 0, 0);font-size: 14px">未经许可，不准在</span></strong><strong><span
+                        style=";font-family: 宋体;color: rgb(0, 0, 0);font-size: 14px;background: rgb(255, 255, 0);font-family:宋体">办公场所内</span></strong><strong><span
+                        style="font-family: 宋体;color: rgb(0, 0, 0);font-size: 14px">从事与本职工作不符的事项</span></strong>
+                </p>
+                <p>
+                    <strong><span style="font-family: 宋体;color: rgb(0, 0, 0);font-size: 14px">&nbsp;</span></strong>
+                </p>
+                <p style="text-indent:24px;line-height:150%">
+                    <span style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">在项目</span><span
+                        style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">实施</span><span
+                        style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">期间</span><span
+                        style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">，发现本人以</span><span
+                        style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">任何形式的</span><span
+                        style=";;font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px;background:rgb(255,255,0);background:rgb(255,255,0);font-family:宋体">索贿</span><span
+                        style=";;font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px;background:rgb(255,255,0);background:rgb(255,255,0);font-family:宋体">、</span><span
+                        style=";;font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px;background:rgb(255,255,0);background:rgb(255,255,0);font-family:宋体">受贿</span><span
+                        style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">行为，均</span><span
+                        style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">可以</span><span
+                        style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">采取措施予以制止，并及时通报</span><span
+                        style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">公司中共开元咨询纪律检查委员会相关领导</span><strong><span
+                        style="font-family: 宋体;line-height: 150%;color: rgb(0, 0, 0);font-size: 16px">（举报电话附后）</span></strong><strong><span
+                        style="font-family: 宋体;line-height: 150%;color: rgb(0, 0, 0);font-size: 16px">。</span></strong>
+                </p>
+                <p style="text-indent:24px;line-height:150%">
+                    <span style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">本人</span><span
+                        style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">如违反</span><span
+                        style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">公司</span><span
+                        style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">制度及本</span><span
+                        style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">承诺书</span><span
+                        style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">规定，</span><span
+                        style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">愿意接受公司根据</span><span
+                        style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">情节轻重、影响大小给予</span><span
+                        style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">的</span><span
+                        style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">行政及经济处罚</span><span
+                        style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">，构成犯罪的，愿意</span><span
+                        style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">司法机关追究</span><span
+                        style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">相应</span><span
+                        style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">刑事责任。</span>
+                </p>
+                <p style="text-indent:16px;line-height:150%">
+                    <strong><span
+                            style="font-family: 宋体;line-height: 150%;color: rgb(0, 0, 0);font-size: 16px">举报电话：</span></strong><span
+                        style=";font-family:宋体;line-height:150%;color:rgb(0,0,0);font-size:16px">中共开元咨询纪律检查委员会</span><strong><span
+                        style="font-family: 宋体;line-height: 150%;color: rgb(0, 0, 0);font-size: 16px">&nbsp;028-</span></strong><strong><span
+                        style="font-family: 宋体;line-height: 150%;color: rgb(0, 0, 0);font-size: 16px">88613080</span></strong><strong><span
+                        style="font-family: 宋体;line-height: 150%;color: rgb(0, 0, 0);font-size: 16px"><span
+                        style="font-family:宋体">；</span>1</span></strong><strong><span
+                        style="font-family: 宋体;line-height: 150%;color: rgb(0, 0, 0);font-size: 16px">5908190396</span></strong><strong><span
+                        style="font-family: 宋体;line-height: 150%;color: rgb(0, 0, 0);font-size: 16px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></strong>
+                </p>
+                <p style="line-height:150%">
+                    <strong><span style="font-family: 宋体;line-height: 150%;color: rgb(0, 0, 0);font-size: 16px">&nbsp;&nbsp;&nbsp;<span
+                            style="font-family:宋体">传真：</span>028-85266136 &nbsp;辛玉川先生收</span></strong>
+                </p>
+                <p style="line-height:150%">
+                    <strong><span style="font-family: 宋体;line-height: 150%;color: rgb(0, 0, 0);font-size: 16px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e-mail: </span></strong><strong><span
+                        style="font-family: 宋体;line-height: 150%;color: rgb(0, 0, 0);font-size: 16px">kyzxts@sckyzx.com</span></strong>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="turnLeave">我已阅读并接受以上条例</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+
+
+
+
+</body>
+
+</html>
+<style type="text/css">
+    #mainContent {
+        padding-left: 30px;
+        background-color: white;
+    }
+
+    .d_post_content img {
+        max-width: 100%
+    }
+
+    .btn1 {
+        border-color: #4898d5;
+        background-color: #2e8ded;
+        color: #fff;
+        float: right;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+        border-radius: 20px;
+    }
+
+    .btn2 {
+        border-color: #7D7E80;
+        background-color: #FFFFFF;
+        color: #7D7E80;
+        float: right;
+        /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);*/
+        border-radius: 20px;
+    }
+
+    .layerBox .layui-layer-content {
+        height: 400px !important;
+    }
+
+    .layui-layer-page .layui-layer-content {
+        overflow-y: scroll;
+    }
+
+    .layerBox {
+        border-radius: 15px;
+    }
+
+    .layerBox .layui-layer-title {
+        border-radius: 10px 10px 0 0;
+        background: linear-gradient(to right, #2780B3, #bc90cc);
+    }
+
+    .layerBox .layui-layer-btn0 {
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    }
+
+    .layerBox .layui-layer-btn1 {
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    }
+
+    .layerBox .layui-layer-content::-webkit-scrollbar {
+        width: 5px;
+        height: 1px;
+    }
+
+    .layerBox .layui-layer-content::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        box-shadow: inset 0 0 5px rgba(97, 184, 179, 0.1);
+        background: #bc90cc;
+    }
+
+    .layerBox .layui-layer-content::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px rgba(87, 175, 187, 0.1);
+        border-radius: 10px;
+        background: #ededed;
+    }
+
+    .layerbgBox {
+        border-radius: 15px;
+    }
+
+    .layerbgBox .layui-layer-content {
+        height: 245px !important;
+        overflow: hidden;
+    }
+
+    .layerbgBox .layui-layer-title {
+        color: #41403E;
+        height: 185px;
+        text-align: center;
+        font-size: 17px;
+        border-radius: 10px 10px 0 0;
+        background: url(../../../images/new/version.png) #ffffff no-repeat;
+        background-position: 25% 50%;
+        background-size: cover;
+        padding: 0;
+        line-height: 320px;
+    }
+
+    .contentTextarea::-webkit-scrollbar {
+        width: 3px;
+        height: 1px;
+    }
+
+    .contentTextarea::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        box-shadow: inset 0 0 5px rgba(97, 184, 179, 0.1);
+        background: #E1E0DF;
+    }
+
+    .contentTextarea::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px rgba(87, 175, 187, 0.1);
+        border-radius: 10px;
+        background: #ededed;
+    }
+
+    .layerBox1 {
+        border-radius: 15px;
+    }
+
+    .layerBox1 .layui-layer-title {
+        border-radius: 10px 10px 0 0;
+        background: linear-gradient(to right, #2780B3, #bc90cc);
+    }
+
+    .layerBox1 .layui-layer-btn0 {
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    }
+
+    .layerBox1 .layui-layer-btn1 {
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    }
+
+    .layerBox1 .layui-layer-content::-webkit-scrollbar {
+        width: 3px;
+        height: 1px;
+    }
+
+    /*    .layerbgBox .layui-layer-btn0{
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    }*/
+</style>
+<script charset="utf-8" src="/kindeditor/kindeditor-all.js"></script>
+<script charset="utf-8" src="/kindeditor/lang/zh-CN.js"></script>
+<!-- 仅涉及js和弹窗的，在此js中编辑相关代码，方便后续整改 -->
+<script charset="utf-8" src="/assets/admin/js/personDesk.js"></script>
+<script>
+
+    let currentSlide = 0;
+    const intervalTime = 5000; // 设置轮播间隔时间为3000毫秒（3秒）
+    let autoSlide;
+	function showKnowledge(){
+        var aiCenterUrl = 'https://ksp.karon.cn/AiPage/?cookies=' + encodeURIComponent(cookies)+"&application=1";
+        // 打开新窗口
+        var newWindow = window.open(aiCenterUrl, '_blank');
+
+        if (!newWindow) {
+            alert('无法打开培训中心，请检查浏览器是否允许弹出窗口！');
+        }
+    }
+    function showSlide(index) {
+        const slides = document.querySelectorAll('.carousel-item');
+        if (index >= slides.length) {
+            currentSlide = 0; // Loop to first slide
+        } else if (index < 0) {
+            currentSlide = slides.length - 1; // Loop to last slide
+        } else {
+            currentSlide = index;
+        }
+
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            slide.style.display = (i === currentSlide) ? 'block' : 'none';
+        });
+    }
+
+    function moveSlide(direction) {
+        showSlide(currentSlide + direction);
+    }
+
+    // 自动轮播功能
+    function startAutoSlide() {
+        autoSlide = setInterval(() => {
+            moveSlide(1); // 每隔时间切换到下一张
+        }, intervalTime);
+    }
+
+    // 停止自动轮播
+    function stopAutoSlide() {
+        clearInterval(autoSlide);
+    }
+
+    // 当鼠标悬停在轮播图上时停止自动轮播
+    const carousel = document.querySelector('.carousel');
+    carousel.addEventListener('mouseenter', stopAutoSlide);
+    carousel.addEventListener('mouseleave', startAutoSlide);
+
+    // 初始化
+    showSlide(currentSlide);
+    startAutoSlide(); // 启动自动轮播
+</script>
+<script type="text/javascript">
+    //加载输入框
+    var editor0000;//主数据回复输入框
+    var editorMap = new Map();//楼层回复输入框
+    var editor;
+    var replyFloorContent = "";
+
+    var K = window.KindEditor;
+
+    function bottomReply() {
+        var a = $("#pb_footer").offset().top;
+        $("html,body").animate({scrollTop: a}, 'slow');
+    }
+
+    function cancelBtn() {
+        Base.list();
+    }
+
+    function operatLog(obj, index, infoId, replyId, type) {
+        var counts = $(obj).data("counts");
+        console.log('counts', counts)
+        var data = {infoId: infoId, replyId: replyId, type: type};
+        console.log('data', data)
+        $.ajax({
+            type: 'post',
+            url: 'PubInfo_number',
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(data),
+            dataType: 'json',
+            success: function (res) {
+                console.log(res);
+                if (res.status == "1") {
+                    if (type == 1) {//点赞
+                        $(obj).html('<i class="fa fa-thumbs-o-up" ></i>赞同(' + (counts + res.counts) + ')');
+                    } else if (type == 2) {
+                        $(obj).html('<i class="fa fa-thumbs-o-down" ></i>不赞同(' + (counts + res.counts) + ')');
+                    } else if (type == 3) {
+                        $(obj).html('<i class="fa fa-star-o" ></i>收藏(' + (counts + res.counts) + ')');
+                    }
+                }
+            }
+        });
+    }
+
+    function floorReply(index, replyId, name) {
+        console.log(index, replyId, name)
+        $("#" + index + "PublishSpan").data("newReplyId", replyId);
+        editor = editorMap.get(index);
+        editor.html("回复 " + name + "：");
+        replyFloorContent = "回复 " + name + "：";
+    }
+
+    function pblishReply(obj) {
+        console.log('obj====', obj)
+
+        var index = $(obj).data("index");
+        var infoId = $(obj).data("infoid");
+        var replyId = $(obj).data("replyid");
+        var newReplyId = $(obj).data("newreplyid");
+        editor = editorMap.get(index + "");
+        // console.log('55555555',editor.html())
+        //证明是回复的层级
+        if (replyFloorContent != '' && editor.html().indexOf(replyFloorContent) > -1) {
+            replyId = newReplyId;
+        }
+        var data = {infoId: infoId, replyId: replyId, content: editor.html()};
+        if (editor.isEmpty()) {
+            layer.alert("请输入内容");
+            return false;
+        }
+        $.ajax({
+            type: 'post',
+            url: 'PubInfo_saveContent',
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(data),
+            dataType: 'json',
+            success: function (res) {
+                console.log(res);
+                if (res.status == "1") {
+                    $("#" + index + "areply").data("replycounts", $("#" + index + "areply").data("replycounts") + 1);
+                    layer.msg("发表成功");
+                    editor.html("");
+                    $.ajax({
+                        type: 'post',
+                        url: 'PubInfo_ajaxFloorReply',
+                        data: {
+                            replyId: replyId,
+                            index: index
+                        },
+                        dataType: 'html',
+                        success: function (res) {
+                            $("#" + index + "floorUl").html(res);
+
+                        },
+                        error: function (xhr) {
+                            layer.msg("暂无结果")
+                        }
+                    });
+                } else {
+                    layer.alert("请联系系统管理员" + res.error);
+                }
+            }
+        });
+
+    }
+
+    function reply(obj, index, replyId) {
+        console.log('66666', obj, index, replyId)
+        console.log('obj', obj)
+        replycounts = $(obj).data("replycounts");
+
+        if ($(obj).data("status") == 1) {
+            $(obj).html("收取回复");
+            $(obj).data("status", "0");
+            $("#" + index + "div").show();
+            $("#" + index + "ReplyDiv").html($("#kindDiv").html());
+            textareaName = "content" + index;
+            editK = K.create('#mainContent textarea[name="' + textareaName + '"]', {
+                width: '783px',
+                height: '50px',
+                resizeType: 1,
+                allowPreviewEmoticons: true,
+                afterBlur: function () {
+                    this.sync();
+                },
+                items: [
+                    'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+                    'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+                    'insertunorderedlist', '|', 'emoticons', 'link'],
+                afterCreate: function () {
+                    var editerDoc = this.edit.doc;//得到编辑器的文档对象
+                    //监听粘贴事件, 包括右键粘贴和ctrl+v
+                    $(editerDoc).bind('paste', null, function (e) {
+                        /*获得操作系统剪切板里的项目，e即kindeditor,
+                      *kindeditor创建了originalEvent(源事件)对象，
+                      *并指向了浏览器的事件对象，而chrome浏览器
+                      *需要通过clipboardData(剪贴板数据)对象的items
+                      *获得复制的图片数据。
+                      */
+                        var ele = e.originalEvent.clipboardData.items;
+                        for (var i = 0; i < ele.length; ++i) {
+                            //判断文件类型
+                            if (ele[i].kind == 'file' && ele[i].type.indexOf('image/') !== -1) {
+                                var file = ele[i].getAsFile();//得到二进制数据
+                                //创建表单对象，建立name=value的表单数据。
+                                console.log(file)
+                                if (file.size > 5242880) {//粘贴图片不能超过5m
+                                    layer.msg("粘贴图片不能超过5m");
+                                    return false;
+                                }
+                                var formData = new FormData();
+                                formData.append("file", file);//name,value
+                                //禁止粘贴
+                                //用jquery Ajax 上传二进制数据
+                                $.ajax({
+                                    url: '/ForumInfo_uploadFile',
+                                    type: 'POST',
+                                    data: formData,
+                                    // 告诉jQuery不要去处理发送的数据
+                                    processData: false,
+                                    // 告诉jQuery不要去设置Content-Type请求头
+                                    contentType: false,
+                                    dataType: "json",
+                                    beforeSend: function () {
+                                        //console.log("正在进行，请稍候");
+                                    },
+                                    success: function (responseStr) {
+                                        //上传完之后，生成图片标签回显图片，假定服务器返回url。
+                                        var src = responseStr.url;
+                                        var imgTag = "<img src='" + src + "' style='max-height:100%;max-width:100%'  border='0' data-ke-src='" + src + "' />";
+                                        //console.info(imgTag);
+                                        //kindeditor提供了一个在焦点位置插入HTML的函数，调用此函数即可。
+                                        editK.insertHtml(imgTag);
+                                        console.log(imgTag)
+                                    },
+                                    error: function (responseStr) {
+                                        console.log("error");
+                                    }
+                                });
+
+                                return false;
+                            }
+
+                        }
+
+
+                    });
+                }
+            });
+            editorMap.set(index, editK);
+            // var event = document.createEvent('HTMLEvents');
+            //     event.initEvent("load",true,true);
+            //     window.dispatchEvent(event);
+            //     //ie
+            //     if(document.createEventObject){
+            //         var event = document.createEventObject();
+            //         window.fireEvent('onload',event);
+            //     }
+            $.ajax({
+                type: 'post',
+                url: 'PubInfo_ajaxFloorReply',
+                data: {
+                    replyId: replyId,
+                    index: index
+                },
+                dataType: 'html',
+                success: function (res) {
+                    $("#" + index + "floorUl").html(res);
+
+                },
+                error: function (xhr) {
+                    layer.msg("暂无结果")
+                }
+            });
+
+        } else {
+            if (replycounts > 0) {
+                $(obj).html("回复(" + replycounts + ")");
+            } else {
+                $(obj).html("回复");
+            }
+            $(obj).data("status", "1");
+            $("#" + index + "div").hide();
+        }
+
+    }
+
+
+    function saveReply(obj) {
+
+        console.log('editor0000', editor0000);
+
+        // var infoId=$(obj).data("infoid");
+        // console.log('infoId',infoId)
+        var data = {infoId: obj, content: editor0000.html()};
+        console.log('data', data)
+        if (editor0000.isEmpty()) {
+            layer.alert("请输入内容");
+            return false;
+        }
+        $.ajax({
+            type: 'post',
+            url: 'PubInfo_saveContent',
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(data),
+            dataType: 'json',
+            success: function (res) {
+                if (res.status == "1") {
+                    layer.msg("发表成功");
+                    params = {id: obj, flag: 1, isAjax: 1}
+                    console.log('params', params)
+                    $.ajax({
+                        type: 'post',
+                        url: 'PubInfo_view',
+                        data: {
+                            jsonParams: JSON.stringify(params)
+                        },
+                        dataType: 'html',
+                        cache: false,
+                        success: function (res) {
+                            // console.log(res)
+                            $("#ajaxContent").html(res);
+                            editor0000.html("");
+                        }
+                    });
+                }
+            }
+        });
+    }
+
+
+    function removeReply(index, li_index, replyId, infoId) {
+        console.log('1111', index, li_index, replyId, infoId)
+        var data = {id: replyId, infoId: infoId};
+        console.log('data', data)
+        $.ajax({
+            type: 'post',
+            url: 'PubInfo_removeReply',
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(data),
+            dataType: 'json',
+            success: function (res) {
+                console.log(res);
+                if (res.status == "0") {
+                    layer.msg("删除成功");
+                    if (li_index == -1) {
+                        console.log(1111111111111, $("#" + index + "loucengDiv"))
+                        $("#" + index + "loucengDiv").remove();
+                    } else {
+                        $("#" + index + "_" + li_index + "li").remove();
+                    }
+
+                }
+            }
+        });
+    }
+
+    lay('.laydateyearmonth').each(function () {
+        var $this = $(this);
+        if ($this.data("initialized")) {
+            return;
+        }
+        laydate.render({
+            elem: this
+            , trigger: 'click'
+            , type: 'month'
+            , min: '2022-01'
+            , done: function (a, b) {
+                // 解决日期选择后无法触发表单验证
+                setTimeout(function () {
+                    $this.trigger('input')
+                }, 200)
+            }
+
+        });
+        $this.data("initialized", "1");
+    });
+
+    function insertForumInfo(id) {
+        console.log(id)
+        $.ajax({
+            type: 'post',
+            url: 'PubInfo_referInfo',
+            data: {
+                id: id
+            },
+
+            dataType: 'html',
+            success: function (res) {
+                $("#ajaxList").html(res);
+
+            }
+        });
+        // window.open("ForumInfo_referInfo?id="+id);
+    }
+
+
+    function minDate1() {
+        var now = new Date();
+        console.log(now.getFullYear() + "-" + (now.getMonth() + 2))
+        return now.getFullYear() + "-" + (now.getMonth() + 2);
+    }
+
+    if ('1' == 0) {
+        $('#myModal').modal('show');
+    }
+    console.log("0");
+    if ("0" != "0") {
+
+        $('#myModal1').modal('show');
+    }
+
+
+    $('.tabs .tab').click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        let id = $(this).index();
+        $('.contents .content').eq(id).addClass('show').siblings().removeClass('show');
+    })
+
+    // $(document).ready(function(){
+    //             var marginTop =0;
+    //             var bool=false;
+    //             setInterval(function(){
+    //                 if(bool) return;//判断运行和停止
+    //                 $(".contents li:first").animate({marginTop:marginTop--},10,function(){
+    //                     if(!($(this).is(":animated"))) {    //判断是否有一个动画节点
+    //                         if ((-marginTop) >= $(this).height()) {  //判断移出位置是否超过高度
+    //                             $(this).css("margin", "0");
+    //                             $(this).appendTo($(".contents"));  //把第一个节点移到ul后面
+    //                             marginTop = 0;      //重新设置移动数值
+    //                         }
+    //                     }
+    //             });
+    //             },100);
+    //             $(".contents").mouseover(function(){   //li鼠标移入，停止移动
+    //                 bool=true;
+    //             });
+    //             $(".contents").mouseout(function(){
+    //                 bool=false;
+    //             });
+    //         });
+
+    //默认取月末
+    function yanqi(id) {
+        if ($("#" + id + "date").val() == '') {
+            layer.alert("请填写延期日期");
+        }
+        if ($("#" + id + "memo").val() == '') {
+            layer.alert("请填写延期原因");
+        }
+        var data = {id: id, flag: 1, delayenddate: $("#" + id + "date").val(), delayreason: $("#" + id + "memo").val()};
+        $.ajax({
+            type: 'post',
+            url: 'WagesApplyForSubsidy_yanqi',
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(data),
+            dataType: 'json',
+            success: function (res) {
+                console.log(res);
+                if (res.status == "1") {
+                    layer.msg("保存成功，已发起延期流程，流程请在我的发起页面查看")
+                    $("#" + id + "tr").remove();
+                } else {
+                    layer.alert(res.error);
+                }
+            }
+        });
+    }
+
+    function noYanqi(id) {
+        var data = {id: id, flag: 2};
+        $.ajax({
+            type: 'post',
+            url: 'WagesApplyForSubsidy_yanqi',
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(data),
+            dataType: 'json',
+            success: function (res) {
+                console.log(res);
+                if (res.status == "1") {
+                    layer.msg("保存成功")
+                    $("#" + id + "tr").remove();
+                }
+            }
+        });
+    }
+
+    function allYanqi() {
+        if (Base.getIds('[name=ids]') == '') {
+            layer.alert("请先选择一条数据");
+            return false;
+        }
+        var data = {flag: 3};
+        $('#myModal2').modal('show');
+    }
+
+    function startFlow(obj) {
+
+        var ids = Base.getIds('[name=ids]');
+        var delaytitle = $("input[name='delaytitle']").val();
+        var delayenddate = $("input[name='delayenddate']").val();
+        var delayreason = $("input[name='delayreason']").val();
+        if (delaytitle == "" || typeof (delaytitle) == "undefined") {
+            layer.alert("请填写延期标题");
+            return false;
+        }
+        if (delayenddate == "" || typeof (delayenddate) == "undefined") {
+            layer.alert("请选择延期日期");
+            return false;
+        }
+        if (delayreason == "" || typeof (delayreason) == "undefined") {
+            layer.alert("请填写延期原因");
+            return false;
+        }
+        $(obj).dbutton('loading');
+        data = {delayenddate: delayenddate, flag: 3, delayreason: delayreason, delaytitle: delaytitle, ids: ids}
+        console.log(data)
+        $.ajax({
+            type: 'post',
+            url: 'WagesApplyForSubsidy_yanqi',
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(data),
+            dataType: 'json',
+            success: function (res) {
+                $(obj).dbutton('reset');
+                console.log(res);
+                if (res.status == "1") {
+                    layer.msg("保存成功，已发起延期流程，流程请在我的发起页面查看")
+                    $('#myModal2').modal('hide');
+                    var arr = ids.split(',');
+                    for (var i in arr) {
+                        $("#" + arr[i] + "tr").remove();
+                    }
+
+                } else {
+                    layer.alert(res.error);
+
+                }
+            }
+        });
+    }
+
+    function allNoYanqi() {
+        if (Base.getIds('[name=ids]') == '') {
+            layer.alert("请先选择一条数据");
+            return false;
+        }
+        var data = {flag: 4, ids: Base.getIds('[name=ids]')};
+        $.ajax({
+            type: 'post',
+            url: 'WagesApplyForSubsidy_yanqi',
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(data),
+            dataType: 'json',
+            success: function (res) {
+                console.log(res);
+                if (res.status == "1") {
+                    layer.msg("保存成功")
+                    var arr = Base.getIds('[name=ids]').split(',');
+                    for (var i in arr) {
+                        $("#" + arr[i] + "tr").remove();
+                    }
+                    if ($("#subsidytbody").find("tr").length == 0) {
+                        $('#myModal1').modal('hide');
+                    }
+
+                }
+            }
+        });
+    }
+
+    $("#turnLeave").on("click", function () {
+        var _this = $(this);
+        var data = {emp_id: '234913568017044600', type: 1, flag: 2};
+        $.ajax({
+            type: 'post',
+            url: "HrSignAgreement_insert",
+            data: {
+                jsonParams: JSON.stringify(data)
+            },
+            dataType: 'html',
+            cache: false,
+            success: function (res) {
+                //layer.msg("签订成功");
+                $('#myModal').modal('hide');
+
+            },
+            error: function (xhr) {
+                if (xhr.responseText.indexOf("showAjaxLogin") == -1) {
+                    layer.alert(xhr.responseText);
+                } else {
+                    showAjaxLogin();
+                }
+            }
+        });
+
+    })
+    var index10;
+    var index11;
+
+    loadQQEmail();
+
+    var haveRead = false;
+
+    function isReaded() {
+        //layer.confirm('您确认已阅读完毕，并理解和认可文档内容？', function(index){
+        haveRead = true;
+        //})
+
+
+    }
+
+    function saveReadPubInfo(infoId, tipId, tip) {
+        console.log('infoId', infoId)
+        console.log('tipId', tipId)
+        console.log('tip', tip)
+
+        //if(haveRead==false){
+        //	layer.msg("未读完，不可签字确认");
+        //	return;
+        //}
+
+        layer.confirm('您确认已阅读完毕，并理解和认可文档内容？', {
+            title: "操作提示",
+            skin: 'layerBox1',
+            area: ['300px', '150px'],
+        }, function (index) {
+            var data = {id: infoId, flag: 1, tipId: tipId, tip: tip};
+            $.ajax({
+                type: 'post',
+                url: 'PubInfo_saveReadPubInfo',
+                data: {jsonParams: JSON.stringify(data)},
+                dataType: 'json',
+                success: function (res) {
+                    console.log(res);
+                    if (res.status == "1") {
+                        layer.closeAll();
+
+                    }
+                }
+            });
+        })
+
+    }
+
+
+    function savePubInfo(id) {
+        layer.confirm('您确认已阅读完毕？', {
+            title: "操作提示",
+            skin: 'layerBox1',
+            area: ['300px', '150px'],
+        }, function (index) {
+            var data = {id: id, flag: 1, tipId: 1, tip: 1};
+            $.ajax({
+                type: 'post',
+                url: 'PubInfo_saveReadPubInfo',
+                data: {jsonParams: JSON.stringify(data)},
+                dataType: 'json',
+                success: function (res) {
+                    console.log(res);
+                    if (res.status == "1") {
+                        layer.closeAll();
+
+                    }
+                }
+            });
+        })
+
+    }
+
+
+    function savePubSystemVersion(id) {
+
+        var data = {id: id, flag: 1};
+        $.ajax({
+            type: 'post',
+            url: 'PubSystemVersion_saveReadPubSystemVersion',
+            data: {jsonParams: JSON.stringify(data)},
+            dataType: 'json',
+            success: function (res) {
+                console.log(res);
+                if (res.status == "1") {
+                    layer.closeAll();
+
+                }
+            }
+        })
+    }
+
+
+    function closeTip() {
+        layer.closeAll();
+    }
+
+    function showFineRuan() {
+        var url = "https://ksp.karon.cn/fr/decision/login/cross/domain?fine_username=ky021-wangyouqiang&fine_password=Ky%402021%2112%23&validity=-1";
+//密码中包含特殊字符时，需转义
+        jQuery.ajax({
+            url: url,//单点登录的管理平台报表服务器
+            timeout: 5000,//超时时间（单位：毫秒）
+            dataType: "jsonp",//跨域采用jsonp方式
+            jsonp: "callback",
+            success: function (res) {
+                console.log(res);
+                if (res.errorCode) {
+                    window.alert(res.errorMsg);
+                } else {
+                    //保存token并跳转到对应链接
+                    //window.open("https://ksp.sckyzx.com/fr/decision");
+                    window.open("https://ksp.karon.cn/fr/decision/view/form?viewlet=ksp%252Fksp_home%252Fhome.frm&op=form_adaptive");
+
+                    //window.location.href?=?"http://ksp.sckyzx.com:9081/fr/decision";
+                }
+            },
+            error: function () {
+                alert("超时或服务器其他错误");//?登录失败（超时或服务器其他错误）??
+            }
+        });
+    }
+
+    if ('' == 1) {
+
+        var defaults = {
+            width: $(window).width() - 80,
+            height: $(window).height() - 80
+        };
+        //
+        index10 = layer.open({
+            title: ['', 'position:relative;z-index:9999;'],
+            type: 1,
+            zIndex: 9999,
+            closeBtn: 1,   // 是否显示关闭按钮
+            area: ['1050px', '500px'],
+            skin: 'layerBox',
+            offset: ['10%', '15%'],
+            shade: true,
+//     area: [defaults.width+'px',defaults.height+'px'],
+            shadeClose: true, //点击遮罩关闭
+            content: $("#layerhtml"),
+            // success: function(layero, index) {
+            //     // 在弹窗打开后，绑定按钮的点击事件
+            //     $(layero).find("#submit-button").click(function() {
+            //       // 获取输入框的值
+            //       var inputValue = $(layero).find("#pubInfocontent").val();
+            //       var id = $(layero).find("").val();
+            //       // 进行相应的处理
+            //       console.log("输入框的值为：" + inputValue);
+            //       // 关闭弹窗s
+            //       // layer.close(index);
+            //     });
+            //   }
+        });
+        editor0000 = K.create('#body1 textarea[name="tcontent"]', {
+            width: '960px',
+            height: '50px',
+            resizeType: 1,
+            allowPreviewEmoticons: true,
+            afterBlur: function () {
+                this.sync();
+            },
+            items: [
+                'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+                'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+                'insertunorderedlist', '|', 'emoticons', 'link'],
+            afterCreate: function () {
+                var editerDoc = this.edit.doc;//得到编辑器的文档对象
+                //监听粘贴事件, 包括右键粘贴和ctrl+v
+                $(editerDoc).bind('paste', null, function (e) {
+                    /*获得操作系统剪切板里的项目，e即kindeditor,
+                      *kindeditor创建了originalEvent(源事件)对象，
+                      *并指向了浏览器的事件对象，而chrome浏览器
+                      *需要通过clipboardData(剪贴板数据)对象的items
+                      *获得复制的图片数据。
+                      */
+                    var ele = e.originalEvent.clipboardData.items;
+                    for (var i = 0; i < ele.length; ++i) {
+                        //判断文件类型
+                        if (ele[i].kind == 'file' && ele[i].type.indexOf('image/') !== -1) {
+                            var file = ele[i].getAsFile();//得到二进制数据
+                            //创建表单对象，建立name=value的表单数据。
+                            console.log(file)
+                            if (file.size > 5242880) {//粘贴图片不能超过5m
+                                layer.msg("粘贴图片不能超过5m");
+                                return false;
+                            }
+                            var formData = new FormData();
+                            formData.append("file", file);//name,value
+                            //禁止粘贴
+                            //用jquery Ajax 上传二进制数据
+                            $.ajax({
+                                url: '/ForumInfo_uploadFile',
+                                type: 'POST',
+                                data: formData,
+                                // 告诉jQuery不要去处理发送的数据
+                                processData: false,
+                                // 告诉jQuery不要去设置Content-Type请求头
+                                contentType: false,
+                                dataType: "json",
+                                beforeSend: function () {
+                                    //console.log("正在进行，请稍候");
+                                },
+                                success: function (responseStr) {
+                                    //上传完之后，生成图片标签回显图片，假定服务器返回url。
+                                    var src = responseStr.url;
+                                    var imgTag = "<img src='" + src + "' style='max-height:100%;max-width:100%'  border='0' data-ke-src='" + src + "' />";
+                                    //console.info(imgTag);
+                                    //kindeditor提供了一个在焦点位置插入HTML的函数，调用此函数即可。
+                                    editor0000.insertHtml(imgTag);
+                                    console.log(imgTag)
+                                },
+                                error: function (responseStr) {
+                                    console.log("error");
+                                }
+                            });
+
+                            return false;
+                        }
+
+                    }
+
+
+                });
+            }
+        });
+    }
+
+    if ('' == 1) {
+        var defaults = {
+            width: $(window).width() - 80,
+            height: $(window).height() - 80
+        };
+        index11 = layer.open({
+            // title:['点击A按钮触发','color:#fff;background-color:#01AAED;'],
+            title: ['更新公告', 'color:#41403E !important;position:relative;z-index:22222'],
+            type: 1,
+            closeBtn: 1,   // 是否显示关闭按钮
+            area: ['420px', '500px'],
+            skin: 'layerbgBox',
+//     area: [defaults.width+'px',defaults.height+'px'],
+            shadeClose: false, //点击遮罩关闭
+            content: $("#layerPubSystemVersionhtml").html()
+        });
+    }
+
+
+    
+
+
+    function doSubmit() {
+
+        // var url = "http://ksp.sckyzx.com:9081/fr/decision";
+        // jQuery.ajax({
+        //     url: "FineSSOLogin",//单点登录的管理平台报表服务器
+        //     timeout: 5000,//超时时间（单位：毫秒）
+        //     dataType:"json",//跨域采用jsonp方式
+        //     success: function (res) {
+        //         console.log(res);
+        //         window.open(url+"?ssoToken="+res.url);
+        //     },
+        //     error: function () {
+        //         alert("超时或服务器其他错误1");// 登录失败（超时或服务器其他错误）
+        //     }
+        // });
+
+    }
+
+    window.onload = function () {
+        getBackgroudStyle()
+        getCalenderContent()
+    }
+    // function getWeatherStyle (){
+    //     console.log(document.getElementsByClassName('weather-box')[0].offsetWidth)
+    //     let weatherBox = document.getElementsByClassName('weather-box')[0]
+    //     if (weatherBox.clientWidth < 100) {
+    //         weatherBox.style.flexDirection = 'column'
+    //     }
+    // }
+
+    function getBackgroudStyle() {
+        // console.log('开元咨询一站式平台')
+        if ('开元咨询一站式平台' == '敏睿工程咨询') {
+            document.querySelector('.body-desk .main-content').style.background = '#eeeeee';
+        }
+    }
+
+    function getCalenderContent() {
+        var ulElement = document.querySelector('.theme');
+        var liElements = ulElement.querySelectorAll('ul');
+        // console.log('liElements',liElements)
+        liElements.forEach(function (liElement) {
+            var liContent = liElement.textContent.trim();
+            // console.log('liContent', liContent);
+        });
+        var ulContent = ulElement.textContent.trim();
+        var calenderBoxElement = document.querySelector('.calenderBox');
+        // console.log('calenderBoxElement',calenderBoxElement)
+        if (ulContent == '') {
+            console.log('该 <ul> 元素没有内容');
+            calenderBoxElement.classList.add('empty');
+        } else {
+            console.log('该 <ul> 元素有内容');
+        }
+    }
+</script>

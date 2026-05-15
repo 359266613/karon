@@ -1,0 +1,19 @@
+{
+  "name": "开元咨询一站式平台",
+  "short_name": "开元平台",
+  "description": "开元咨询一站式办公平台移动端入口",
+  "start_url": "/desk",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#eef1f5",
+  "theme_color": "#2780B3",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon_ksp.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon",
+      "purpose": "any"
+    }
+  ]
+}
