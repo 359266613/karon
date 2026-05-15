@@ -11,7 +11,6 @@ import android.net.Uri;
 import android.net.http.SslError;
 import android.os.Bundle;
 import android.os.Environment;
-import android.provider.Settings;
 import android.view.ViewGroup;
 import android.webkit.CookieManager;
 import android.webkit.DownloadListener;
@@ -24,6 +23,11 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 public class MainActivity extends Activity {
     private static final int FILE_CHOOSER_REQUEST = 1001;
@@ -106,6 +110,49 @@ public class MainActivity extends Activity {
         }
     }
 
+    private void injectMobileAssets() {
+        injectCss(readAsset("ksp-mobile-inject.css"));
+        injectScript(readAsset("ksp-mobile-inject.js"));
+    }
+
+    private String readAsset(String fileName) {
+        StringBuilder builder = new StringBuilder();
+        try (InputStream inputStream = getAssets().open(fileName);
+             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                builder.append(line).append('\n');
+            }
+        } catch (IOException ignored) {
+            return "";
+        }
+        return builder.toString();
+    }
+
+    private void injectCss(String css) {
+        if (css == null || css.length() == 0) return;
+        String script = "(function(){"
+                + "var old=document.getElementById('ksp-apk-mobile-style');if(old){old.remove();}"
+                + "var style=document.createElement('style');style.id='ksp-apk-mobile-style';"
+                + "style.textContent=" + jsString(css) + ";"
+                + "document.head.appendChild(style);"
+                + "})();";
+        webView.evaluateJavascript(script, null);
+    }
+
+    private void injectScript(String scriptContent) {
+        if (scriptContent == null || scriptContent.length() == 0) return;
+        webView.evaluateJavascript(scriptContent, null);
+    }
+
+    private String jsString(String value) {
+        return "'" + value
+                .replace("\\", "\\\\")
+                .replace("'", "\\'")
+                .replace("\r", "")
+                .replace("\n", "\\n") + "'";
+    }
+
     @Override
     public void onBackPressed() {
         if (webView != null && webView.canGoBack()) {
@@ -165,6 +212,12 @@ public class MainActivity extends Activity {
         @Override
         public void onPageStarted(WebView view, String url, Bitmap favicon) {
             super.onPageStarted(view, url, favicon);
+        }
+
+        @Override
+        public void onPageFinished(WebView view, String url) {
+            super.onPageFinished(view, url);
+            injectMobileAssets();
         }
 
         @Override
