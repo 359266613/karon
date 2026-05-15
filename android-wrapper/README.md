@@ -60,6 +60,29 @@ https://ksp.karon.cn/desk
 - 外部链接是否能正常打开；
 - HTTP/HTTPS 混合链接是否被拦截。
 
+## Windows 本地移动端 UI 预览
+
+不需要先编译 APK，可以在仓库根目录启动本地预览服务：
+
+```powershell
+cd C:\Users\wyq\Desktop\karon
+npm run preview:mobile
+```
+
+打开：
+
+```text
+http://localhost:5173/preview
+```
+
+页面里有三个入口：
+
+- `本地静态页面 + APK 注入模拟`：加载本地 `ksp.karon.cn/desk`，并模拟 APK 注入的移动端 CSS/JS。
+- `真实站点登录 + APK 注入模拟`：代理 `https://ksp.karon.cn/desk`，可用于登录后检查“我的待办”等真实业务页面的手机端 UI。
+- `本地静态页面原始模式`：不模拟 APK 注入，用于对比原始页面。
+
+推荐用 Chrome 打开后按 `F12`，切换设备工具栏，选择手机竖屏尺寸。之后修改移动端 CSS/JS 只需要刷新浏览器，不需要重新打包安装 APK。
+
 ## 后续发布正式包
 
 当前 workflow 构建的是 debug APK，适合测试安装。正式发布需要补充 release 签名：

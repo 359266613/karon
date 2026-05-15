@@ -4,6 +4,8 @@
     if (window.__kspMobileInjected) return;
     window.__kspMobileInjected = true;
 
+    var dynamicObserverStarted = false;
+
     function isMobile() {
         return window.innerWidth <= 900;
     }
@@ -67,6 +69,44 @@
         });
     }
 
+    function enhanceDynamicContent() {
+        if (!isMobile()) return;
+
+        document.querySelectorAll('.content_right, .content-left, .content_left, .content-middle, .content_middle, .main-left, .main-middle, .main-right, .left-content, .middle-content, .right-content').forEach(function (element) {
+            element.classList.add('mobile-stack-section');
+        });
+
+        document.querySelectorAll('table').forEach(function (table) {
+            if (table.closest('.table-responsive, .mobile-table-scroll')) return;
+            var wrapper = document.createElement('div');
+            wrapper.className = 'mobile-table-scroll';
+            table.parentNode.insertBefore(wrapper, table);
+            wrapper.appendChild(table);
+        });
+
+        document.querySelectorAll('.dataTables_wrapper').forEach(function (wrapperElement) {
+            if (wrapperElement.parentElement && wrapperElement.parentElement.classList.contains('mobile-table-scroll')) return;
+            var wrapper = document.createElement('div');
+            wrapper.className = 'mobile-table-scroll';
+            wrapperElement.parentNode.insertBefore(wrapper, wrapperElement);
+            wrapper.appendChild(wrapperElement);
+        });
+    }
+
+    function observeDynamicContent() {
+        if (dynamicObserverStarted || !window.MutationObserver || !document.body) return;
+        dynamicObserverStarted = true;
+        var timer;
+        var observer = new MutationObserver(function () {
+            clearTimeout(timer);
+            timer = setTimeout(enhanceDynamicContent, 80);
+        });
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+    }
+
     function forceMobileClass() {
         document.documentElement.classList.add('ksp-apk-mobile');
         document.body.classList.add('ksp-apk-mobile');
@@ -76,6 +116,8 @@
         if (!document.body) return;
         forceMobileClass();
         bindSidebar();
+        enhanceDynamicContent();
+        observeDynamicContent();
     }
 
     if (document.readyState === 'loading') {

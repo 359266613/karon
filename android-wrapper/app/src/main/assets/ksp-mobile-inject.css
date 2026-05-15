@@ -317,8 +317,130 @@ body.side-hide .lt-frame {
     overflow: visible !important;
 }
 
+.content,
+.content_right,
+.content-left,
+.content_left,
+.content-middle,
+.content_middle,
+.main-left,
+.main-middle,
+.main-right,
+.left-content,
+.middle-content,
+.right-content,
+.pull-left,
+.pull-right {
+    display: block !important;
+    float: none !important;
+    clear: both !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    max-height: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    overflow: visible !important;
+}
+
+.content_right,
+.right-content,
+.main-right {
+    margin-top: 12px !important;
+}
+
+.content_right ul,
+.content_right li,
+.content_right ul > li p,
+.right-content ul,
+.right-content li,
+.main-right ul,
+.main-right li {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+}
+
+.content_right ul > li,
+.right-content ul > li,
+.main-right ul > li {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    padding: 8px 0 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, .06) !important;
+}
+
+.content_right ul > li p,
+.right-content ul > li p,
+.main-right ul > li p {
+    flex: 1 1 auto !important;
+    margin: 0 !important;
+    white-space: normal !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+}
+
+.content_right ul > li a.banli,
+.right-content ul > li a.banli,
+.main-right ul > li a.banli,
+.content_right .btn,
+.right-content .btn,
+.main-right .btn {
+    flex: 0 0 auto !important;
+    min-width: 48px !important;
+    min-height: 32px !important;
+    line-height: 28px !important;
+    text-align: center !important;
+    border-radius: 6px !important;
+}
+
+.dflex,
+.dflex_right,
+.meeting-box,
+.point-box,
+.time-box,
+.weather-box {
+    max-width: 100% !important;
+    min-width: 0 !important;
+}
+
+.title,
+.bar,
+.noticed,
+.calenderBox,
+.time-box,
+.incident-box,
+.weather-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+[style*="width:"] {
+    max-width: 100% !important;
+}
+
+.desk-warpper [style*="width: 73%"],
+.desk-warpper [style*="width:73%"],
+.desk-warpper [style*="width: 48%"],
+.desk-warpper [style*="width:48%"],
+.desk-warpper [style*="width: 26%"],
+.desk-warpper [style*="width:26%"],
+.desk-warpper [style*="width: 70%"],
+.desk-warpper [style*="width:70%"] {
+    width: 100% !important;
+}
+
 .table-responsive,
-.dataTables_wrapper {
+.dataTables_wrapper,
+.mobile-table-scroll {
     width: 100% !important;
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch !important;

@@ -5,6 +5,7 @@
     var $body;
     var $sidebar;
     var $mask;
+    var dynamicObserverStarted = false;
 
     function isMobile() {
         return mobileQuery ? mobileQuery.matches : window.innerWidth <= 768;
@@ -77,6 +78,39 @@
         }
     }
 
+    function enhanceDynamicContent() {
+        if (!isMobile()) return;
+
+        $('.content_right, .content-left, .content_left, .content-middle, .content_middle, .main-left, .main-middle, .main-right, .left-content, .middle-content, .right-content')
+            .addClass('mobile-stack-section');
+
+        $('table').each(function () {
+            var $table = $(this);
+            if ($table.closest('.table-responsive, .mobile-table-scroll').length) return;
+            $table.wrap('<div class="mobile-table-scroll"></div>');
+        });
+
+        $('.dataTables_wrapper').each(function () {
+            var $wrapper = $(this);
+            if ($wrapper.parent('.mobile-table-scroll').length) return;
+            $wrapper.wrap('<div class="mobile-table-scroll"></div>');
+        });
+    }
+
+    function observeDynamicContent() {
+        if (dynamicObserverStarted || !window.MutationObserver || !document.body) return;
+        dynamicObserverStarted = true;
+        var timer;
+        var observer = new MutationObserver(function () {
+            clearTimeout(timer);
+            timer = setTimeout(enhanceDynamicContent, 80);
+        });
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+    }
+
     function registerServiceWorker() {
         if (!('serviceWorker' in navigator)) return;
         window.addEventListener('load', function () {
@@ -88,6 +122,8 @@
 
     $(function () {
         bindSidebar();
+        enhanceDynamicContent();
+        observeDynamicContent();
         registerServiceWorker();
     });
 })(jQuery, window, document);
